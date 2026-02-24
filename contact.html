@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Root Access Network — Contact</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green: #1DB954;
+      --dark: #0F2D1E;
+      --muted: #ecedf0;
+      --white: #ffffff;
+    }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .soft-glow { box-shadow: 0 10px 30px rgba(16,185,129,0.08); }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- ===== STICKY HEADER ===== -->
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-[color:var(--dark)] border-b border-[color:var(--green)]/20 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+       <!-- Left: Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
+            <img src="TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
+          </div>
+          <div>
+            <div class="text-lg font-extrabold">TRAN</div>
+            <div class="text-xs text-gray-300 -mt-1">The Root Access Network</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 font-medium">
+          <a href="about-us.html" class="hover:text-[color:var(--green)]">About</a>
+          <a href="programs.html" class="hover:text-[color:var(--green)]">Programs</a>
+          <a href="get-involved.html" class="hover:text-[color:var(--green)]">Get Involved</a>
+          <a href="contact.html" class="hover:text-[color:var(--green)]">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://www.youtube.com/@TheRootAccessNetwork" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] hover:bg-[color:var(--green)] hover:text-white transition">Watch</a>
+          <a href="#cta" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobileBtn" class="md:hidden p-2 rounded-md border border-white/20 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[color:var(--dark)]/95 border-t border-white/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="about-us.html" class="block text-white">About</a>
+        <a href="programs.html" class="block text-white font-semibold">Programs</a>
+        <a href="get-involved.html" class="block text-white">Get Involved</a>
+        <a href="contact.html" class="block text-white">Contact</a>
+        <div class="pt-2 flex gap-2">
+          <a href="https://www.youtube.com/@TheRootAccessNetwork" class="flex-1 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] text-center">Watch</a>
+          <a href="#cta" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="relative bg-[color:var(--dark)] text-white py-24 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get in Touch with Us</h1>
+      <p class="text-gray-300 text-lg">We’d love to hear from you — whether you have questions, partnership ideas, or want to join our movement to make cybersecurity education accessible for all.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM SECTION ===== -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+      <!-- Form -->
+      <div class="bg-white rounded-2xl p-8 soft-glow border">
+        <h2 class="text-2xl font-bold mb-6 text-[color:var(--dark)]">Send Us a Message</h2>
+
+        <form class="space-y-5">
+          <div>
+            <label class="block text-sm font-semibold mb-2">Full Name</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="Your name">
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2">Email Address</label>
+            <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="you@example.com">
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2">Subject</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="How can we help?">
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2">Message</label>
+            <textarea rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="bg-[color:var(--green)] text-black font-semibold px-6 py-3 rounded-full hover:bg-[#159b44] transition w-full">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-[color:var(--dark)] mb-4">Contact Information</h2>
+          <p class="text-gray-600 mb-6">Our team is always ready to connect with you. Reach out via email or visit our local office.</p>
+
+          <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[color:var(--green)]/10 rounded-full flex items-center justify-center text-[color:var(--green)]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21 8V7l-3 2-2-1-3 1-2-1-3 1-2-1-3 2v1l3 2 2-1 3 1 2-1 3 1 2-1 3 2z"/></svg>
+              </div>
+              <span>therootaccessnetwork@africybercore.com</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[color:var(--green)]/10 rounded-full flex items-center justify-center text-[color:var(--green)]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+              </div>
+              <span>+234 (0) 701-234-5678</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[color:var(--green)]/10 rounded-full flex items-center justify-center text-[color:var(--green)]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/></svg>
+              </div>
+              <span>Lagos, Nigeria</span>
+            </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+    <footer id="contact" class="bg-[color:var(--dark)] text-gray-200 py-10">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
+             <img src="c:\Users\ifeol\Desktop\Web Dev\TRAN\TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
+           </div>
+            <div>
+              <div class="font-bold text-white">TRAN</div>
+              <div class="text-sm">The Root Access Network</div>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-300 mt-4 max-w-sm">A mentorship-driven community helping students & early-career professionals into IT & Cybersecurity. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
+        </div>
+
+        <div class="text-sm">
+          <div class="font-semibold text-white mb-3">Quick Links</div>
+          <ul class="space-y-2">
+            <li><a href="about-us.html" class="hover:text-white">About Us</a></li>
+            <li><a href="#programs" class="hover:text-white">Programs</a></li>
+            <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+          </ul>
+        </div>
+
+        <div class="text-sm">
+          <div class="font-semibold text-white mb-3">Follow Us</div>
+          <div class="flex items-center gap-3">
+            <a href="https://ng.linkedin.com/company/the-root-access-network-t-r-a-n" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">LinkedIn</a>
+            <a href="https://www.instagram.com/therootaccessnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
+            <a href="https://www.youtube.com/@TheRootAccessNetwork" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">YouTube</a>
+          </div>
+
+          <div class="mt-6 text-xs text-gray-400">© 2025 The Root Access Network</div>
+        </div>
+      </div>
+    </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+<script>
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobileBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</html>

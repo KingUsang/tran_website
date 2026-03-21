@@ -38,14 +38,23 @@
     .scroll-snap { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
     .card-snap { scroll-snap-align: start; }
     /* small shadow */
-    .soft-glow { box-shadow: 0 10px 30px rgba(16,185,129,0.08); }
+    .soft-glow { 
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .soft-glow:hover {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: rgba(29, 185, 84, 0.4);
+      transform: translateY(-4px);
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- ===== STICKY HEADER ===== -->
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-[color:var(--dark)] border-b border-[color:var(--green)]/20 text-white">
+  <header class="sticky top-0 z-40 bg-[color:var(--dark)] border-b border-[color:var(--green)]/30 text-white backdrop-blur-md bg-opacity-95">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-center justify-between h-16">
        <!-- Left: Logo -->
@@ -102,7 +111,7 @@
       </video>
 
       <!-- dark overlay for readability -->
-      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="absolute inset-0 bg-black/60"></div>
 
       <!-- hero content -->
       <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
@@ -114,9 +123,9 @@
               Community · Mentorship · Education
             </span>
 
-            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">Root Access. Real Opportunity.</h1>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">Ubuntu Bridge Initiative</h1>
 
-            <p class="text-gray-200 max-w-xl mb-6">Supporting students and early-career professionals to break into IT & Cybersecurity through mentorship, school tours, and street outreach.</p>
+            <p class="text-gray-200 max-w-xl mb-6">Supporting students and early-career professionals to break into Cybersecurity through mentorship, school tours, and street outreach.</p>
 
             <div class="flex gap-4">
               <a href="/get-involved/" class="inline-flex items-center gap-2 bg-[color:var(--green)] text-black px-5 py-3 rounded-full font-semibold hover:bg-[#159b44] transition">
@@ -136,40 +145,45 @@
     </section>
 
     <!-- ===== IMPACT STATS ===== -->
-    <section id="impact" class="max-w-6xl mx-auto px-6 py-14">
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center soft-glow border">
-          <div class="text-2xl font-bold text-[color:var(--dark)]">200+</div>
-          <div class="text-sm text-gray-600 mt-1">Students Reached Through CEST</div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center soft-glow border">
-          <div class="text-2xl font-bold text-[color:var(--dark)]">7+</div>
-          <div class="text-sm text-gray-600 mt-1">Weeks of Ubuntu Bridge Initiative</div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center soft-glow border">
-          <div class="text-2xl font-bold text-[color:var(--dark)]">50+</div>
-          <div class="text-sm text-gray-600 mt-1">Community Members Mentored</div>
-        </div>
-        <!--<div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center soft-glow border">
+    <section id="impact" class="bg-green-50 w-full py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow-lg shadow-green-900/5 border border-green-100 hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-[color:var(--green)]">500+</div>
+            <div class="text-sm font-medium text-gray-700 mt-2">Students Reached Through school tours</div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow-lg shadow-green-900/5 border border-green-100/50 hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-[color:var(--green)]">10+</div>
+            <div class="text-sm font-medium text-gray-700 mt-2">Weeks of Ubuntu Bridge Initiative</div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow-lg shadow-green-900/5 border border-green-100/50 hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-[color:var(--green)]">20+</div>
+            <div class="text-sm font-medium text-gray-700 mt-2">Community Members Mentored</div>
+          </div>
+          <!--<div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center soft-glow border">
           <div class="text-2xl font-bold text-[color:var(--dark)]">20+</div>
           <div class="text-sm text-gray-600 mt-1">Cybersecurity News Roundups</div>
         </div>-->
-        <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center soft-glow border">
-          <div class="text-2xl font-bold text-[color:var(--dark)]">4+</div>
-          <div class="text-sm text-gray-600 mt-1">School Tour Episodes</div>
+          <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow-lg shadow-green-900/5 border border-green-100/50 hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-[color:var(--green)]">4+</div>
+            <div class="text-sm font-medium text-gray-700 mt-2">School Tour Episodes</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===== PROGRAMS PREVIEW ===== -->
-    <section id="programs" class="bg-[color:var(--dark)] py-16">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between mb-8">
-          <div>
-            <h2 class="text-2xl font-extrabold mb-2 text-[color:var(--white)]">What We Do</h2>
-            <p class="text-sm text-gray-400">From classrooms to street corners, from weekly news roundups to one-on-one mentorship, we show up where it matters most.</p>
+    <section id="programs" class="bg-[color:var(--dark)] py-20 relative overflow-hidden">
+      <!-- decorative glow -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[color:var(--green)]/5 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex items-center justify-between mb-12">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-extrabold mb-4 text-[color:var(--white)]">What We Do</h2>
+            <p class="text-lg text-gray-300 leading-relaxed">From classrooms to street corners, from weekly news roundups to one-on-one mentorship, we show up where it matters most.</p>
           </div>
-          </div>
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- card 1 -->
@@ -282,10 +296,10 @@
     </section>
 
     <!-- ===== JOIN CTA ===== -->
-    <section id="cta" class="py-16 bg-white">
+    <section id="cta" class="py-20 bg-green-50/50">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-extrabold text-[color:var(--dark)] mb-4">Join a Community That Has Your Back</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto mb-8">At T.R.A.N, 'I am because we are' isn't a slogan &mdash; it's how we operate. Whether you're a student just starting out, a professional ready to give back, or an organisation that wants to make an impact &mdash; there's a place for you here.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">At TRAN, 'I am because we are' isn't a slogan &mdash; it's how we operate. Whether you're a student just starting out, a professional ready to give back, or an organisation that wants to make an impact &mdash; there's a place for you here.</p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="/get-involved/" class="inline-flex items-center gap-2 bg-[color:var(--green)] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#159b44] transition">Join the Network</a>
           <a href="/contact/" class="inline-flex items-center gap-2 border border-[color:var(--dark)] text-[color:var(--dark)] px-6 py-3 rounded-full font-semibold hover:bg-[color:var(--dark)] hover:text-white transition">Partner With Us</a>
@@ -323,7 +337,7 @@
             </div>
           </div>
 
-          <p class="text-sm text-gray-300 mt-4 max-w-sm">The Root Access Network (TRAN) is a mentorship-driven community created to support students and early-career professionals breaking into the world of IT and Cybersecurity while also making Cybersecurity knowledge as available as air to everyone. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
+          <p class="text-sm text-gray-300 mt-4 max-w-sm">The Root Access Network (TRAN) is a mentorship-driven community created to support students and early-career professionals breaking into the world of Cybersecurity while also making Cybersecurity knowledge as available as air to everyone. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
         </div>
 
         <div class="text-sm">

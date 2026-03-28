@@ -10,6 +10,20 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="manifest" href="/site.webmanifest">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
       --green: #1DB954;      /* primary accent */
@@ -17,7 +31,7 @@
       --muted: #ecedf0;
       --white: #ffffff
     }
-    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    body { font-family: 'Outfit', sans-serif; }
     /* play overlay circle */
     .play-overlay {
       background: rgba(0,0,0,0.45);
@@ -45,9 +59,7 @@
       <div class="flex items-center justify-between h-16">
        <!-- Left: Logo -->
         <a href="/" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-          </div>
+            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
           <div>
             <div class="text-lg font-extrabold">TRAN</div>
             <div class="text-xs text-gray-300 -mt-1">The Root Access Network</div>
@@ -63,7 +75,7 @@
 
         <div class="hidden md:flex items-center gap-3">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] hover:bg-[color:var(--green)] hover:text-white transition">Watch</a>
-          <a href="#cta" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
+          <a href="/get-involved/#join" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -82,7 +94,7 @@
         <a href="/contact/" class="block text-white">Contact</a>
         <div class="pt-2 flex gap-2">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="flex-1 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] text-center">Watch</a>
-          <a href="#cta" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
+          <a href="/get-involved/#join" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
         </div>
       </div>
     </div>
@@ -90,24 +102,31 @@
 
   <!-- HERO SECTION -->
   <section class="relative bg-black text-white">
-    <img src="../about-hero.jpg" alt="TRAN in action" class="w-full h-[70vh] object-cover opacity-60">
+    <img src="../about-hero.jpg" alt="TRAN in action" class="w-full h-[80vh] object-cover opacity-60">
     <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">I am Because We Are</h1>
-      <p class="max-w-2xl text-gray-200 mb-6">The Root Access Network TRAN was built on a simple but powerful belief: that access to cybersecurity knowledge should be as common as air — freely available to every one who wants it, regardless of where they are or where they started.</p>
-      <div class="space-x-4">
-        <a href="/get-involved/" class="bg-green-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition">Join the Network</a>
-        <a href="https://www.youtube.com/@TheRootAccessNetwork" class="border border-green-500 text-green-500 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition">Watch Our Videos</a>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[color:var(--green)] mb-4">About Us</h1>
+      <p class="max-w-2xl text-gray-200 mb-6 text-lg">
+        The Root Access Network (TRAN) is a cybersecurity education company dedicated to making digital safety knowledge accessible to everyone.
+        We design and deliver innovative cybersecurity learning products and services, including educational board games, digital learning tools, training programs, workshops, and curriculum materials for schools, organisations, and communities.
+      </p>
+      <div class="flex flex-col md:flex-row gap-4">
+        <a href="/get-involved/" class="bg-green-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition text-center">Join the Network</a>
+        <a href="https://www.youtube.com/@TheRootAccessNetwork" class="border border-green-500 text-green-500 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition text-center">Watch Our Videos</a>
       </div>
     </div>
   </section>
 
   <!-- OUR STORY -->
   <section class="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-10 items-center">
-    <img src="../TRAN-Logo-B.jpeg" alt="TRAN school tour" class="rounded-2xl shadow-lg object-cover">
+    <img src="../founder.jpeg" alt="TRAN founder" class="rounded-2xl shadow-lg object-cover">
     <div>
       <h2 class="text-3xl font-bold text-green-600 mb-4">Our Story</h2>
       <p class="text-gray-700 mb-4 leading-relaxed">
-        TRAN was born from a question that wouldn't go away — and a community that refused to leave anyone behind. From mentorship to school tours, weekly data support to street outreach, everything we do comes back to one conviction: talent is everywhere. Access is not. We exist to close that gap.
+
+TRAN began as a community helping people grow in technology through mentorship and shared learning.
+As we grew, we discovered a bigger gap — people were using the internet without understanding how to stay safe.
+This led us to evolve into a cybersecurity education company, building simple and practical learning tools like CYTRAC.
+Today, we empower individuals, schools, and organisations with the knowledge to navigate the digital world safely.
       </p>
     </div>
   </section>
@@ -116,25 +135,42 @@
   <section class="bg-gray-50 py-16">
     <div class="max-w-6xl mx-auto text-center px-6">
       <h2 class="text-3xl font-bold text-green-600 mb-6">Our Mission</h2>
-      <p class="text-gray-700 mb-10 max-w-2xl mx-auto">To make access to cybersecurity knowledge as common as air — freely available, practical, and empowering for every one who wants it.</p>
+      <p class="text-gray-700 mb-10 max-w-2xl mx-auto">To build a world where individuals develop strong cybersecurity awareness from an early age, and organisations foster responsible digital citizenship.</p>
 
-      <h2 class="text-3xl font-bold text-green-600 mb-6">What We Stand For</h2>
+      <h2 class="text-3xl font-bold text-green-600 mb-6">Our Focus Areas</h2>
       <div class="grid md:grid-cols-3 gap-8 text-left">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-bold text-xl text-green-600 mb-3">Community First</h3>
-          <p class="text-gray-700">We invest in people before programmes. Every decision starts with what's best for our community members.</p>
+        <!-- Card 1: Innovation -->
+        <div class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <!-- Faded Watermark Icon -->
+          <div class="absolute -top-4 -right-4 text-green-500 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
+            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          </div>
+          <div class="relative z-10">
+            <h3 class="font-bold text-xl text-gray-900 mb-3">Innovation</h3>
+            <p class="text-gray-600 leading-relaxed">Cybersecurity education products and learning tools.</p>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-bold text-xl text-green-600 mb-3">Real-World Learning</h3>
-          <p class="text-gray-700">We teach what actually helps you get the job and do the work — practical, relevant, and honest.</p>
+
+        <!-- Card 2: Mentorship -->
+        <div class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="absolute -top-4 -right-4 text-green-500 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
+            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <div class="relative z-10">
+            <h3 class="font-bold text-xl text-gray-900 mb-3">Mentorship</h3>
+            <p class="text-gray-600 leading-relaxed">Professional training and mentorship programs.</p>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-bold text-xl text-green-600 mb-3">Consistency</h3>
-          <p class="text-gray-700">Weekly roundups, weekly support, weekly content. We show up — every single week without fail.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-bold text-xl text-green-600 mb-3">Ubuntu</h3>
-          <p class="text-gray-700">I am because we are. Every win in this community is a shared win.</p>
+
+        <!-- Card 3: Awareness -->
+        <div class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="absolute -top-4 -right-4 text-green-500 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
+            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 00-3 3v6a3 3 0 003 3h3.763l7.79 3.894A1 1 0 0018 21V3zm1.778 4.095a1 1 0 10-1.556 1.81c1.367 1.176 2.028 2.396 2.028 3.595 0 1.2-.66 2.419-2.028 3.595a1 1 0 101.556 1.81c2.05-1.763 2.972-3.876 2.972-5.405 0-1.53-.922-3.642-2.972-5.405z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="relative z-10">
+            <h3 class="font-bold text-xl text-gray-900 mb-3">Awareness</h3>
+            <p class="text-gray-600 leading-relaxed">Cybersecurity awareness and digital literacy initiatives.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -144,23 +180,41 @@
 <section class="max-w-7xl mx-auto py-16 px-6 text-center">
   <h2 class="text-3xl font-bold text-green-600 mb-10">What We Do</h2>
 
-  <div class="grid md:grid-cols-3 gap-8 place-items-center">
-    <div class="flex flex-col items-center justify-between p-6 bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm">
-      <img src="../cybersecurity education.jpg" alt="Mentorship" class="rounded-lg mb-4 w-full h-48 object-cover">
-      <h3 class="font-semibold text-lg text-green-600 mb-2">Cybersecurity Mentorship and Education</h3>
-      <p class="text-gray-700 text-sm">Connecting aspiring cybersecurity professionals with experienced mentors.</p>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
+    <!-- CYTRAC Card -->
+    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
+      <img src="../cytrac.jpg" alt="CYTRAC Board Game" class="w-full h-48 object-cover">
+      <div class="p-6 flex flex-col items-center flex-grow text-center">
+        <h3 class="font-semibold text-lg text-green-600 mb-2">CYTRAC</h3>
+        <p class="text-gray-700 text-sm">Our flagship educational cybersecurity board game designed to teach practical digital safety skills through play.</p>
+      </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between p-6 bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm">
-      <img src="../School tour.jpg" alt="School Tours" class="rounded-lg mb-4 w-full h-48 object-cover">
-      <h3 class="font-semibold text-lg text-green-600 mb-2">School Tours</h3>
-      <p class="text-gray-700 text-sm">Introducing cybersecurity to students across Nigerian schools.</p>
+    <!-- Mentorship Card -->
+    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
+      <img src="../mentorship.jpg" alt="Mentorship" class="w-full h-48 object-cover">
+      <div class="p-6 flex flex-col items-center flex-grow text-center">
+        <h3 class="font-semibold text-lg text-green-600 mb-2">Cybersecurity Mentorship and Education</h3>
+        <p class="text-gray-700 text-sm">Connecting aspiring cybersecurity professionals with experienced mentors.</p>
+      </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between p-6 bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm">
-      <img src="../thumbnail2.png" alt="Street Vox Pop" class="rounded-lg mb-4 w-full h-48 object-cover">
-      <h3 class="font-semibold text-lg text-green-600 mb-2">Cybersecurity Street Interview</h3>
-      <p class="text-gray-700 text-sm">Raising public cybersecurity awareness through community interviews.</p>
+    <!-- School Tours -->
+    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
+      <img src="../School tour.jpg" alt="School Tours" class="w-full h-48 object-cover">
+      <div class="p-6 flex flex-col items-center flex-grow text-center">
+        <h3 class="font-semibold text-lg text-green-600 mb-2">School Tours</h3>
+        <p class="text-gray-700 text-sm">Introducing cybersecurity to students across Nigerian schools.</p>
+      </div>
+    </div>
+
+    <!-- Street Interview -->
+    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
+      <img src="../thumbnail2.png" alt="Street Vox Pop" class="w-full h-48 object-cover">
+      <div class="p-6 flex flex-col items-center flex-grow text-center">
+        <h3 class="font-semibold text-lg text-green-600 mb-2">Cybersecurity Street Interview</h3>
+        <p class="text-gray-700 text-sm">Raising public cybersecurity awareness through community interviews.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -169,8 +223,8 @@
   <!-- IMPACT NUMBERS -->
   <section class="bg-green-600 text-white py-16">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 text-center gap-8">
-      <div><h3 class="text-4xl font-bold">200+</h3><p>Students Reached</p></div>
-      <div><h3 class="text-4xl font-bold">8+</h3><p>Weeks of Ubuntu Bridge</p></div>
+      <div><h3 class="text-4xl font-bold">500+</h3><p>Students Reached</p></div>
+      <div><h3 class="text-4xl font-bold">10+</h3><p>Weeks of Ubuntu Bridge</p></div>
       <div><h3 class="text-4xl font-bold">50+</h3><p>students mentored</p></div>
       <div><h3 class="text-4xl font-bold">4+</h3><p>School Tour Episodes</p></div>
     </div>
@@ -190,22 +244,26 @@
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold text-green-600 mb-4">Our Partners &amp; Community</h2>
       <p class="text-gray-600 mb-10">TRAN works alongside organisations that share our mission of expanding access to tech education globally.</p>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
-        <div class="bg-white p-5 rounded-xl shadow">
+      <div class="flex flex-wrap justify-center gap-6 text-left">
+        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
           <h3 class="font-bold text-green-600 mb-1">KDSCE</h3>
           <p class="text-gray-600 text-sm">Kaduna Students Career Expo — formal partnership announced January 2026</p>
         </div>
-        <div class="bg-white p-5 rounded-xl shadow">
+        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
           <h3 class="font-bold text-green-600 mb-1">Project Code-Hijabi</h3>
           <p class="text-gray-600 text-sm">Platinum Partner, supporting Muslim women into tech</p>
         </div>
-        <div class="bg-white p-5 rounded-xl shadow">
+        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
           <h3 class="font-bold text-green-600 mb-1">ISC2 Center for Cyber Safety and Education</h3>
           <p class="text-gray-600 text-sm">Community volunteering affiliation</p>
         </div>
-        <div class="bg-white p-5 rounded-xl shadow">
+        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
           <h3 class="font-bold text-green-600 mb-1">Africa CyberFest</h3>
           <p class="text-gray-600 text-sm">Community sponsor and attendee partner</p>
+        </div>
+        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
+          <h3 class="font-bold text-green-600 mb-1">Cumberland Road Masjid</h3>
+          <p class="text-gray-600 text-sm">Partner for free 4-month AI workshops teaching practical skills to kids and adults.</p>
         </div>
       </div>
     </div>
@@ -214,82 +272,50 @@
   <!-- TEAM SECTION -->
   <section class="max-w-7xl mx-auto py-16 px-6 text-center">
     <h2 class="text-3xl font-bold text-green-600 mb-10">Meet the Team</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div>
+    <div class="space-y-10">
+      <div class="max-w-xs mx-auto">
         <a href="https://www.linkedin.com/in/quadri-omoloju-950b20208/">
           <img src="../founder.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
           <h3 class="font-semibold text-lg">Quadri Omoloju</h3>
-          <p class="text-gray-600 text-sm">Founder & Lead Mentor</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/maryam-sulaiman/">
-          <img src="../community-manager.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Maryam Sulaiman</h3>
-          <p class="text-gray-600 text-sm">Community Manager</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/muhammad-shitta-bey/">
-          <img src="../Cybersecurity-educator.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Muhammad Shitta-Bey</h3>
-          <p class="text-gray-600 text-sm">Cybersecurity Educator</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/barakatullah-alawiye-4062902a7/">
-          <img src="../Education-Awareness-lead.png" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Barakatullah Alawiye</h3>
-          <p class="text-gray-600 text-sm">Education & Awareness Lead</p>
+          <p class="text-gray-600 text-sm">Founder & CEO</p>
         </a>
       </div>
 
-
-      <div>
-        <a href="https://www.linkedin.com/in/ayokunle-aruleba/">
-          <img src="../member1.png" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Ayokunle Aruleba</h3>
-          <p class="text-gray-600 text-sm">Member</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/adaezefestus/">
-          <img src="../member2.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Adaeze Festus</h3>
-          <p class="text-gray-600 text-sm">Member</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/masturah-babawale-050745258/">
-          <img src="../member3.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Masturah Babawale</h3>
-          <p class="text-gray-600 text-sm">Member</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/oladega-mukaram/">
-          <img src="../member4.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Oladega Mukaram</h3>
-          <p class="text-gray-600 text-sm">Member</p>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/james-adegunna-8044b4245/">
-          <img src="../member5.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">James Adegunna</h3>
-          <p class="text-gray-600 text-sm">Member</p>
-        </a>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 items-start max-w-5xl mx-auto">
+        <div class="md:col-start-1 sm:order-2 md:order-none">
+          <a href="https://www.linkedin.com/in/maryam-sulaiman/">
+            <img src="../community-manager.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
+            <h3 class="font-semibold text-lg">Maryam Sulaiman</h3>
+            <p class="text-gray-600 text-sm">Community Manager</p>
+          </a>
+        </div>
+        <div class="md:col-start-2 sm:order-1 md:order-none">
+          <a href="https://www.linkedin.com/in/muhammad-shitta-bey/">
+            <img src="../Cybersecurity-educator.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
+            <h3 class="font-semibold text-lg">Muhammad Shitta-Bey</h3>
+            <p class="text-gray-600 text-sm">Cybersecurity Educator</p>
+          </a>
+        </div>
+        <div class="md:col-start-3 sm:col-span-2 md:col-span-1 sm:justify-self-center md:justify-self-auto sm:order-3 md:order-none">
+          <a href="https://www.linkedin.com/in/barakatullah-alawiye-4062902a7/">
+            <img src="../Education-Awareness-lead.png" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
+            <h3 class="font-semibold text-lg">Barakatullah Alawiye</h3>
+            <p class="text-gray-600 text-sm">Education & Awareness Lead</p>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CALL TO ACTION -->
   <section class="bg-black text-white py-16 text-center">
-    <h2 class="text-3xl font-bold text-green-500 mb-6">Ready to Make a Difference?</h2>
-    <p class="text-gray-300 mb-8">Whether you're a student just starting out, a professional ready to give back, or an organisation that wants to make an impact — there's a place for you here.</p>
-    <div class="space-x-4">
-      <a href="/get-involved/" class="bg-green-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition">Join the Network</a>
-      <a href="/contact/" class="border border-green-500 text-green-500 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition">Partner With Us</a>
+    <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-green-500 mb-6">Ready to Make a Difference?</h2>
+      <p class="text-gray-300 mb-8 max-w-2xl">Whether you're a student just starting out, a professional ready to give back, or an organisation that wants to make an impact — there's a place for you here.</p>
+      <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto justify-center">
+        <a href="/get-involved/" class="bg-green-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition text-center w-full md:w-auto">Join the Network</a>
+        <a href="/contact/" class="border border-green-500 text-green-500 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition text-center w-full md:w-auto">Partner With Us</a>
+      </div>
     </div>
   </section>
 
@@ -298,15 +324,13 @@
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-          </div>
+            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
           <div>
             <div class="font-bold text-white">TRAN</div>
             <div class="text-sm">The Root Access Network</div>
           </div>
         </div>
-        <p class="text-sm text-gray-300 mt-4 max-w-sm">The Root Access Network (TRAN) is a mentorship-driven community created to support students and early-career professionals breaking into the world of Cybersecurity while also making Cybersecurity knowledge as available as air to everyone. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
+        <p class="text-sm text-gray-300 mt-4 max-w-sm">TRAN is a cybersecurity education company making digital safety accessible to everyone. We create innovative learning tools, games, and workshops for schools and communities. Want to collaborate? Email us at <a href="mailto:info@therootaccessnetwork.com" class="text-[color:var(--green)]">info@therootaccessnetwork.com</a></p>
       </div>
       <div class="text-sm">
         <div class="font-semibold text-white mb-3">Quick Links</div>
@@ -321,7 +345,7 @@
         <div class="font-semibold text-white mb-3">Follow Us</div>
         <div class="flex items-center gap-3">
           <a href="https://ng.linkedin.com/company/the-root-access-network-t-r-a-n" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">LinkedIn</a>
-          <a href="https://www.instagram.com/therootaccessnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
+          <a href="https://www.instagram.com/info@therootaccessnetwork.comnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">YouTube</a>
         </div>
         <div class="mt-6 text-xs text-gray-400">© 2026 The Root Access Network</div>

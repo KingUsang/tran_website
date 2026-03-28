@@ -12,9 +12,22 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -23,7 +36,7 @@
       --muted: #ecedf0;
       --white: #ffffff
     }
-    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    body { font-family: 'Outfit', sans-serif; }
     /* play overlay circle */
     .play-overlay {
       background: rgba(0,0,0,0.45);
@@ -50,9 +63,7 @@
       <div class="flex items-center justify-between h-16">
        <!-- Left: Logo -->
         <a href="/" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-          </div>
+            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
           <div>
             <div class="text-lg font-extrabold">TRAN</div>
             <div class="text-xs text-gray-300 -mt-1">The Root Access Network</div>
@@ -68,7 +79,7 @@
 
         <div class="hidden md:flex items-center gap-3">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] hover:bg-[color:var(--green)] hover:text-white transition">Watch</a>
-          <a href="#cta" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
+          <a href="/get-involved/#join" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -87,7 +98,7 @@
         <a href="/contact/" class="block text-white">Contact</a>
         <div class="pt-2 flex gap-2">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="flex-1 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] text-center">Watch</a>
-          <a href="#cta" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
+          <a href="/get-involved/#join" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
         </div>
       </div>
     </div>
@@ -95,7 +106,7 @@
 
   <!-- HERO -->
   <main>
-    <section class="relative h-[70vh] md:h-[72vh]">
+    <section class="relative h-[50vh] md:h-[50vh]">
       <div class="absolute inset-0">
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80" alt="Programs hero" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/60"></div>
@@ -112,13 +123,46 @@
     <!-- PROGRAMS GRID -->
     <section class="py-20 px-6 lg:px-20 bg-white text-black">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-[color:var(--dark)]">What We Do</h2>
-        <p class="text-center text-gray-600 mb-12">From classrooms to street corners, from weekly news roundups to one-on-one mentorship — we show up where it matters most.</p>
+        <!--<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-[color:var(--dark)]">What We Do</h2>
+        <p class="text-center text-gray-600 mb-12">From classrooms to street corners, from weekly news roundups to one-on-one mentorship — we show up where it matters most.</p>-->
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="flex flex-wrap justify-center gap-10">
+
+          <!-- Cytrac -->
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden">
+              <img src="../cytrac.jpg" alt="CYTRAC Board Game" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">CYTRAC Board Game</h3>
+              <p class="text-gray-700 text-sm">Our flagship educational cybersecurity board game designed to teach practical digital safety skills through play.</p>
+            </div>
+          </div>
+
+          <!-- Mentorship Program -->
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden">
+              <img src="../mentorship.jpg" alt="Mentorship Program" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Cybersecurity Mentorship Program</h3>
+              <p class="text-gray-700 text-sm">Connecting aspiring cybersecurity professionals with experienced mentors for guidance, career advice, and skill development.</p>
+            </div>
+          </div>
+
+          <!-- Community Workshop -->
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+            <div class="overflow-hidden">
+              <img src="../cybersecurity education.jpg" alt="Community Workshop" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Community Cybersafe Workshops</h3>
+              <p class="text-gray-700 text-sm">Interactive, hands-on workshops designed to teach practical digital safety and technical skills to individuals, schools, and organizations.</p>
+            </div>
+          </div>
 
           <!-- 1 - CEST -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
               <img src="../School tour.jpg" alt="CEST" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
@@ -129,9 +173,9 @@
           </div>
 
           <!-- 2 - Ubuntu Bridge -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
-              <img src="../mentorship1.jpg" alt="Ubuntu Bridge" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+              <img src="../tran_powebank.jpg" alt="Ubuntu Bridge" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Ubuntu Bridge Initiative</h3>
@@ -140,9 +184,9 @@
           </div>
 
           <!-- 3 - Monthly Webinar -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
-              <img src="../mentorship.jpg" alt="Monthly Webinar" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+              <img src="../tran_monthly_webinar.jpg" alt="Monthly Webinar" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Monthly Webinar Series</h3>
@@ -151,7 +195,7 @@
           </div>
 
           <!-- 4 - Street Cyber Evangelism -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
               <img src="../thumbnail2.png" alt="Street Cyber Evangelism" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
@@ -162,7 +206,7 @@
           </div>
 
           <!-- 6 - Weekly News Roundup -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <!--<div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
               <img src="../thumbnail1.png" alt="News Roundup" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
@@ -170,34 +214,34 @@
               <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Cybersecurity Weekly News Roundup</h3>
               <p class="text-gray-700 text-sm">Every week, we curate the most important cybersecurity stories from around the world — so our community stays informed, aware, and ahead of emerging threats.</p>
             </div>
-          </div>
+          </div>-->
 
-          <!-- 7 - Tech Spotlight Saturday -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <!-- 7 - Tech Spotlight Sunday -->
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
               <img src="../Team.jpg" alt="Tech Spotlight" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Tech Spotlight Saturday</h3>
-              <p class="text-gray-700 text-sm">Every Saturday, we spotlight a rising community member — sharing their cybersecurity journey, challenges, and advice. Proof that there is no single path into this field.</p>
+              <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Tech Spotlight Sunday</h3>
+              <p class="text-gray-700 text-sm">Every Sunday, we spotlight a rising community member — sharing their cybersecurity journey, challenges, and advice. Proof that there is no single path into this field.</p>
             </div>
           </div>
 
           <!-- 8 - HR Mock Interview -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
-              <img src="../about us.png" alt="Mock Interview" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+              <img src="../hr_mock_interview.jpg" alt="Mock Interview" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">HR Mock Interview Sessions</h3>
-              <p class="text-gray-700 text-sm">We connect community members with experienced Talent Acquisition professionals for real, pressure-tested mock interviews. Free for all T.R.A.N members. Open to the public with limited slots.</p>
+              <p class="text-gray-700 text-sm">We connect community members with experienced Talent Acquisition professionals for real, pressure-tested mock interviews. Free for all TRAN members. Open to the public with limited slots.</p>
             </div>
           </div>
 
           <!-- 9 - Myth vs Fact -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
-              <img src="../thumbnail3.png" alt="Myth vs Fact" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+              <img src="../tran_myth.jpg" alt="Myth vs Fact" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Myth vs Fact — Cybersecurity Education</h3>
@@ -206,13 +250,13 @@
           </div>
 
           <!-- 10 - Weekly Opportunities -->
-          <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
+          <div class="group w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.667rem)] bg-gray-50 rounded-2xl overflow-hidden shadow-lg soft-glow hover:shadow-2xl transition-all duration-300">
             <div class="overflow-hidden">
-              <img src="../schooltour.jpeg" alt="Opportunities" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+              <img src="../tran_job_alert.jpg" alt="Opportunities" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-[color:var(--dark)] mb-2">Weekly Opportunities</h3>
-              <p class="text-gray-700 text-sm">Every week without fail, T.R.A.N curates cybersecurity job vacancies, internships, fellowships, bootcamps, and certification opportunities. We also offer CV review support. One post can change someone's career.</p>
+              <p class="text-gray-700 text-sm">Every week without fail, TRAN curates cybersecurity job vacancies, internships, fellowships, bootcamps, and certification opportunities. We also offer CV review support. One post can change someone's career.</p>
             </div>
           </div>
 
@@ -225,7 +269,7 @@
       <div class="max-w-4xl mx-auto text-center px-6">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Join The Root Access Movement</h2>
         <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Partner with us, become a mentor, or support our mission to make cybersecurity knowledge as available as air.</p>
-        <a href="mailto:therootaccessnetwork@africybercore.com" class="inline-block bg-white text-[color:var(--dark)] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Get Involved</a>
+        <a href="mailto:info@therootaccessnetwork.com" class="inline-block bg-white text-[color:var(--dark)] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Get Involved</a>
       </div>
     </section>
 
@@ -236,15 +280,13 @@
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-          </div>
+            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
           <div>
             <div class="font-bold text-white">TRAN</div>
             <div class="text-sm">The Root Access Network</div>
           </div>
         </div>
-        <p class="text-sm text-gray-300 mt-4 max-w-sm">The Root Access Network (TRAN) is a mentorship-driven community created to support students and early-career professionals breaking into the world of Cybersecurity while also making Cybersecurity knowledge as available as air to everyone. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
+        <p class="text-sm text-gray-300 mt-4 max-w-sm">TRAN is a cybersecurity education company making digital safety accessible to everyone. We create innovative learning tools, games, and workshops for schools and communities. Want to collaborate? Email us at <a href="mailto:info@therootaccessnetwork.com" class="text-[color:var(--green)]">info@therootaccessnetwork.com</a></p>
       </div>
       <div class="text-sm">
         <div class="font-semibold text-white mb-3">Quick Links</div>
@@ -259,7 +301,7 @@
         <div class="font-semibold text-white mb-3">Follow Us</div>
         <div class="flex items-center gap-3">
           <a href="https://ng.linkedin.com/company/the-root-access-network-t-r-a-n" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">LinkedIn</a>
-          <a href="https://www.instagram.com/therootaccessnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
+          <a href="https://www.instagram.com/info@therootaccessnetwork.comnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">YouTube</a>
         </div>
         <div class="mt-6 text-xs text-gray-400">© 2026 The Root Access Network</div>

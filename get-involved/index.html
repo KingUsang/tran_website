@@ -12,9 +12,22 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -23,7 +36,7 @@
       --muted: #ecedf0;
       --white: #ffffff
     }
-    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    body { font-family: 'Outfit', sans-serif; }
     /* play overlay circle */
     .play-overlay {
       background: rgba(0,0,0,0.45);
@@ -51,9 +64,7 @@
       <div class="flex items-center justify-between h-16">
        <!-- Left: Logo -->
         <a href="/" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-          </div>
+            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
           <div>
             <div class="text-lg font-extrabold">TRAN</div>
             <div class="text-xs text-gray-300 -mt-1">The Root Access Network</div>
@@ -69,7 +80,7 @@
 
         <div class="hidden md:flex items-center gap-3">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] hover:bg-[color:var(--green)] hover:text-white transition">Watch</a>
-          <a href="#cta" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
+          <a href="/get-involved/#join" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -88,7 +99,7 @@
         <a href="/contact/" class="block text-white">Contact</a>
         <div class="pt-2 flex gap-2">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="flex-1 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] text-center">Watch</a>
-          <a href="#cta" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
+          <a href="/get-involved/#join" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
         </div>
       </div>
     </div>
@@ -104,7 +115,7 @@
     <div class="absolute inset-0 bg-black/55"></div>
     <div class="relative max-w-4xl mx-auto text-center px-6">
       <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get Involved</h1>
-      <p class="text-gray-300 max-w-2xl mx-auto">T.R.A.N runs on community. Whether you're here to learn, to teach, to fund, or to partner — there's a way for you to plug in.</p>
+      <p class="text-gray-300 max-w-2xl mx-auto">TRAN (Ubuntu Bridge Initiative) runs on community. Whether you're here to learn, to teach, to fund, or to partner — there's a way for you to plug in.</p>
       <div class="mt-8 flex justify-center gap-4">
         <a href="#volunteer" class="bg-[color:var(--green)] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#159b44] transition">Become a Volunteer</a>
         <a href="#donate" class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-[color:var(--dark)] transition">Support Us</a>
@@ -156,12 +167,13 @@
   <section id="donate" class="bg-[color:var(--dark)] text-white py-16">
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 class="text-3xl font-extrabold mb-4">Support the Mission</h2>
+        <h2 class="text-3xl font-extrabold mb-4">Support the Ubuntu Bridge Initiative</h2>
         <p class="text-gray-300 mb-6">Every contribution helps us run school tours, provide data support to learners, produce free content, and keep our community programmes running.</p>
         <ul class="space-y-2 text-gray-400 mb-6">
-          <li>✓ ₦5,000 — prints cybersecurity awareness materials for a school visit</li>
-          <li>✓ ₦25,000 — sponsors one learner's data subscription for a full month</li>
-          <li>✓ ₦100,000 — funds a laptop powebank for a learner</li>
+          <li>✓ ₦5,000/$5/€5 — prints cybersecurity awareness materials for a school visit</li>
+          <li>✓ ₦25,000/$25/€25 — sponsors one learner's data subscription for a full month</li>
+          <li>✓ ₦100,000/$100/€100 — funds a laptop powebank for a learner</li>
+          <li>✓ ₦200,000/$200/€200 — purchases a laptop for a learner</li>
         </ul>
         <a href="#join" class="inline-flex bg-[color:var(--green)] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#159b44] transition">Donate Now</a>
       </div>
@@ -175,13 +187,38 @@
       <p class="text-gray-600">Ready to take action? Fill out the form below to become part of The Root Access Network community.</p>
     </div>
 
-    <form class="bg-white border rounded-2xl p-8 soft-glow space-y-4">
+    <form class="ajax-form bg-white border rounded-2xl p-8 soft-glow space-y-4">
+      <input type="hidden" name="form_type" value="get-involved">
+      <div class="status-message hidden"></div>
+      
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" placeholder="Full Name" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none">
-        <input type="email" placeholder="Email Address" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none">
+        <div>
+          <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input id="fullName" type="text" name="Full Name" placeholder="Full Name" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none" required>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+          <input id="email" type="email" name="Email Address" placeholder="Email Address" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none" required>
+        </div>
       </div>
-      <input type="text" placeholder="Area of Interest (Mentor, Volunteer, Partner...)" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none">
-      <textarea placeholder="Tell us why you'd like to get involved" rows="4" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none"></textarea>
+
+      <div>
+        <label for="areaOfInterest" class="block text-sm font-medium text-gray-700 mb-1">Area of Interest</label>
+        <select id="areaOfInterest" name="Area of Interest" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none bg-white" required>
+          <option value="" selected disabled>Select an area of interest</option>
+          <option value="Volunteer">Volunteer</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Partner">Partner</option>
+          <option value="Donor">Donor</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea id="message" name="Message" placeholder="Tell us why you'd like to get involved" rows="4" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[color:var(--green)] outline-none" required></textarea>
+      </div>
+
       <button type="submit" class="bg-[color:var(--green)] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#159b44] transition w-full">Submit</button>
     </form>
   </section>
@@ -191,16 +228,14 @@
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
         <div>
           <div class="flex items-center gap-3">
-           <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-             <img src="../TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-           </div>
+             <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
             <div>
               <div class="font-bold text-white">TRAN</div>
               <div class="text-sm">The Root Access Network</div>
             </div>
           </div>
 
-          <p class="text-sm text-gray-300 mt-4 max-w-sm">A mentorship-driven community helping students & early-career professionals into Cybersecurity. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
+          <p class="text-sm text-gray-300 mt-4 max-w-sm">TRAN is a cybersecurity education company making digital safety accessible to everyone. We create innovative learning tools, games, and workshops for schools and communities. Want to collaborate? Email us at <a href="mailto:info@therootaccessnetwork.com" class="text-[color:var(--green)]">info@therootaccessnetwork.com</a></p>
         </div>
 
         <div class="text-sm">
@@ -216,7 +251,7 @@
           <div class="font-semibold text-white mb-3">Follow Us</div>
           <div class="flex items-center gap-3">
             <a href="https://ng.linkedin.com/company/the-root-access-network-t-r-a-n" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">LinkedIn</a>
-            <a href="https://www.instagram.com/therootaccessnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
+            <a href="https://www.instagram.com/info@therootaccessnetwork.comnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
             <a href="https://www.youtube.com/@TheRootAccessNetwork" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">YouTube</a>
           </div>
 
@@ -226,6 +261,7 @@
     </footer>
 
 </body>
+<script src="../js/form-handler.js"></script>
 <script>
   // Mobile menu toggle
   const mobileBtn = document.getElementById('mobileBtn');

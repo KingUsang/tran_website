@@ -12,9 +12,22 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -23,7 +36,7 @@
       --muted: #ecedf0;
       --white: #ffffff
     }
-    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    body { font-family: 'Outfit', sans-serif; }
     /* play overlay circle */
     .play-overlay {
       background: rgba(0,0,0,0.45);
@@ -59,9 +72,7 @@
       <div class="flex items-center justify-between h-16">
        <!-- Left: Logo -->
         <a href="/" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-            <img src="TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-          </div>
+            <img src="TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
           <div>
             <div class="text-lg font-extrabold">TRAN</div>
             <div class="text-xs text-gray-300 -mt-1">The Root Access Network</div>
@@ -77,7 +88,7 @@
 
         <div class="hidden md:flex items-center gap-3">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] hover:bg-[color:var(--green)] hover:text-white transition">Watch</a>
-          <a href="#cta" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
+          <a href="/get-involved/" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -96,7 +107,7 @@
         <a href="/contact/" class="block text-white">Contact</a>
         <div class="pt-2 flex gap-2">
           <a href="https://www.youtube.com/@TheRootAccessNetwork" class="flex-1 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] text-center">Watch</a>
-          <a href="#cta" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
+          <a href="/get-involved/#join" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
         </div>
       </div>
     </div>
@@ -208,7 +219,7 @@
 
           <!-- card 3 -->
           <article class="bg-white rounded-2xl overflow-hidden soft-glow border transition">
-            <img src="mentorship.jpg" alt="Monthly Webinar Series" class="w-full h-64 object-cover">
+            <img src="tran_monthly_webinar.jpg" alt="Monthly Webinar Series" class="w-full h-64 object-cover">
             <div class="p-6">
               <h3 class="font-bold text-lg mb-2">Monthly Webinar Series</h3>
               <p class="text-sm text-gray-600 mb-4">Honest, practical conversations about cybersecurity careers, software engineering, CV readiness, and real-world industry preparation. Monthly. Free. No fluff.</p>
@@ -282,7 +293,7 @@
     </section>
 
     <!-- ===== UPCOMING EVENTS ===== -->
-    <section id="events" class="py-14 bg-[color:var(--dark)]">
+    <!--<section id="events" class="py-14 bg-[color:var(--dark)]">
       <div class="max-w-7xl mx-auto px-6">
         <div class="mb-6">
           <h2 class="text-2xl font-extrabold text-[color:var(--white)]">Upcoming Events &amp; Tours</h2>
@@ -293,7 +304,7 @@
           <a href="#newsletter" class="inline-flex items-center gap-2 bg-[color:var(--green)] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#159b44] transition">Join the Mailing List</a>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- ===== JOIN CTA ===== -->
     <section id="cta" class="py-20 bg-green-50/50">
@@ -313,7 +324,9 @@
         <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Stay Updated on Events & Cybersecurity Tips</h2>
         <p class="text-gray-200 mb-6">Get event invites, free resources, and practical security tips delivered to your inbox.</p>
 
-        <form id="newsletterForm" class="flex flex-col sm:flex-row items-center gap-3 justify-center">
+        <form id="newsletterForm" class="ajax-form flex flex-col sm:flex-row items-center gap-3 justify-center">
+          <input type="hidden" name="form_type" value="newsletter" />
+          <div class="status-message hidden w-full text-center sm:order-4"></div>
           <input required name="name" placeholder="Your name" class="w-full sm:w-[220px] rounded-full px-4 py-3 text-gray-900" />
           <input required name="email" type="email" placeholder="Your email" class="w-full sm:w-[320px] rounded-full px-4 py-3 text-gray-900" />
           <button type="submit" class="rounded-full bg-[color:var(--green)] text-black px-6 py-3 font-semibold">Subscribe</button>
@@ -328,16 +341,14 @@
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
         <div>
           <div class="flex items-center gap-3">
-           <div class="w-10 h-10 rounded-md bg-black flex items-center justify-center">
-             <img src="TRAN-Logo.png" alt="Logo" class="w-6 h-6 object-contain">
-           </div>
+             <img src="TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
             <div>
               <div class="font-bold text-white">TRAN</div>
               <div class="text-sm">The Root Access Network</div>
             </div>
           </div>
 
-          <p class="text-sm text-gray-300 mt-4 max-w-sm">The Root Access Network (TRAN) is a mentorship-driven community created to support students and early-career professionals breaking into the world of Cybersecurity while also making Cybersecurity knowledge as available as air to everyone. Want to collaborate? Email us at <a href="mailto:therootaccessnetwork@africybercore.com" class="text-[color:var(--green)]">therootaccessnetwork@africybercore.com</a></p>
+          <p class="text-sm text-gray-300 mt-4 max-w-sm">TRAN is a cybersecurity education company making digital safety accessible to everyone. We create innovative learning tools, games, and workshops for schools and communities. Want to collaborate? Email us at <a href="mailto:info@therootaccessnetwork.com" class="text-[color:var(--green)]">info@therootaccessnetwork.com</a></p>
         </div>
 
         <div class="text-sm">
@@ -353,7 +364,7 @@
           <div class="font-semibold text-white mb-3">Follow Us</div>
           <div class="flex items-center gap-3">
             <a href="https://ng.linkedin.com/company/the-root-access-network-t-r-a-n" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">LinkedIn</a>
-            <a href="https://www.instagram.com/therootaccessnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
+            <a href="https://www.instagram.com/info@therootaccessnetwork.comnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
             <a href="https://www.youtube.com/@TheRootAccessNetwork" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">YouTube</a>
           </div>
 
@@ -446,21 +457,9 @@ function openVideo(videoId) {
 }
 
 
-    // newsletter submit
-    const newsletterForm = document.getElementById('newsletterForm');
-    newsletterForm?.addEventListener('submit', function(e){
-      e.preventDefault();
-      // normally you'd POST to your API here
-      document.getElementById('newsletterMsg').classList.remove('hidden');
-      // simple visual feedback
-      setTimeout(()=> {
-        document.getElementById('newsletterMsg').classList.add('hidden');
-        newsletterForm.reset();
-      }, 2500);
-    });
-
     // helper: open video from thumb onClick (global fn)
     window.openVideo = openVideo;
   </script>
+  <script src="/js/form-handler.js"></script>
 </body>
 </html>

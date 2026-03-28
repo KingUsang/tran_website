@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.setTimeout(() => {
         toast.remove();
       }, 220);
-    }, 3400);
+    }, 5000);
   };
 
   // Select all forms with class 'ajax-form'
@@ -95,14 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
   forms.forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault(); // Prevent default submission
-      const statusMessage = form.querySelector('.status-message');
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton.textContent;
-
-      if(statusMessage) {
-        statusMessage.textContent = '';
-        statusMessage.className = 'status-message hidden';
-      }
 
       submitButton.disabled = true;
       submitButton.textContent = 'Please wait...';
@@ -118,25 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (result.success) {
           showToast(result.message || 'Submitted successfully.', 'success');
-          if(statusMessage) {
-            statusMessage.textContent = result.message;
-            statusMessage.className = 'status-message text-sm mt-3 text-green-600 font-semibold';
-          }
           form.reset();
         } else {
           showToast(result.message || 'Something went wrong.', 'error');
-          if(statusMessage) {
-             statusMessage.textContent = result.message || 'Something went wrong.';
-             statusMessage.className = 'status-message text-sm mt-3 text-red-600 font-semibold';
-          }
         }
       } catch (error) {
         console.error('Error:', error);
         showToast('Connection error. Please try again.', 'error');
-         if(statusMessage) {
-            statusMessage.textContent = 'Connection error. Please try again.';
-            statusMessage.className = 'status-message text-sm mt-3 text-red-600 font-semibold';
-         }
       } finally {
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;

@@ -239,7 +239,7 @@
         <div class="flex items-center justify-between mb-6">
           <div>
             <h2 class="text-2xl font-extrabold text-[color:var(--dark)]">Latest Videos</h2>
-            <p class="text-sm text-gray-500">Vox-pops, school tour episodes, tutorials, and event highlights.</p>
+            <p class="text-sm text-gray-500">Vox-pops, school tour episodes, and event highlights.</p>
           </div>
         </div>
 
@@ -260,20 +260,6 @@
 
           <!-- video thumb 2 -->
           <div class="relative group bg-white rounded-2xl overflow-hidden soft-glow border">
-            <img src="thumbnail2.png" alt="video 2" class="w-full h-52 object-cover">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="play-overlay group-hover:scale-105 cursor-pointer" onclick="openVideo('qYJRg5mjZFE')">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 8l6 4-6 4V8z"/></svg>
-              </div>
-            </div>
-            <div class="p-4">
-              <h3 class="font-semibold text-[color:var(--dark)]">TRAN Street Cyber Evangelism</h3>
-              <p class="text-xs text-gray-500">1:18 · By TRAN</p>
-            </div>
-          </div>
-
-          <!-- video thumb 3 -->
-          <div class="relative group bg-white rounded-2xl overflow-hidden soft-glow border">
             <img src="schooltour.jpeg" alt="video 3" class="w-full h-52 object-cover">
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="play-overlay group-hover:scale-105 cursor-pointer" onclick="openVideo('SGAqtSQsJV8')">
@@ -281,8 +267,27 @@
               </div>
             </div>
             <div class="p-4">
-              <h3 class="font-semibold text-[color:var(--dark)]">Cybersecurity Educational</h3>
+              <h3 class="font-semibold text-[color:var(--dark)]">Cybersecurity Educational School Tour</h3>
               <p class="text-xs text-gray-500">2:10 · By TRAN</p>
+            </div>
+          </div>
+
+          <!-- video thumb 3 -->
+          <div class="relative group bg-white rounded-2xl overflow-hidden soft-glow border">
+            <div class="w-full" style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; background:#000;">
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7328053076429344768?compact=true"
+                title="World Password Day"
+                style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+                allowfullscreen
+                scrolling="no"
+                allow="encrypted-media *;"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-[color:var(--dark)]">World Password Day</h3>
+              <p class="text-xs text-gray-500">LinkedIn · By TRAN</p>
             </div>
           </div>
         </div>
@@ -326,8 +331,8 @@
 
         <form id="newsletterForm" class="ajax-form flex flex-col sm:flex-row items-center gap-3 justify-center">
           <input type="hidden" name="form_type" value="newsletter" />
-          <input required name="name" placeholder="Your name" class="w-full sm:w-[220px] rounded-full px-4 py-3 text-gray-900" />
-          <input required name="email" type="email" placeholder="Your email" class="w-full sm:w-[320px] rounded-full px-4 py-3 text-gray-900" />
+          <input required type="text" name="name" placeholder="Your name" autocomplete="name" minlength="2" maxlength="80" pattern="[A-Za-z][A-Za-z .'-]{1,79}" title="Please enter your full name." class="w-full sm:w-[220px] rounded-full px-4 py-3 text-gray-900" />
+          <input required name="email" type="email" placeholder="Your email" autocomplete="email" maxlength="254" class="w-full sm:w-[320px] rounded-full px-4 py-3 text-gray-900" />
           <button type="submit" class="rounded-full bg-[color:var(--green)] text-black px-6 py-3 font-semibold">Subscribe</button>
         </form>
 

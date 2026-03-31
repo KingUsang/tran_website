@@ -111,12 +111,12 @@
           <input type="hidden" name="form_type" value="contact">
           <div>
             <label class="block text-sm font-semibold mb-2">Full Name</label>
-            <input type="text" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="Your name" required>
+            <input type="text" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="Your name" autocomplete="name" minlength="2" maxlength="80" pattern="[A-Za-z][A-Za-z .'-]{1,79}" title="Please enter your full name." required>
           </div>
 
           <div>
             <label class="block text-sm font-semibold mb-2">Email Address</label>
-            <input type="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="you@example.com" required>
+            <input type="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
           </div>
 
           <div>
@@ -133,7 +133,7 @@
 
           <div>
             <label class="block text-sm font-semibold mb-2">Message</label>
-            <textarea name="message" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="Write your message here..." required></textarea>
+            <textarea name="message" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-[color:var(--green)] focus:ring-[color:var(--green)] outline-none" placeholder="Write your message here..." minlength="10" maxlength="2000" required></textarea>
           </div>
 
           <button type="submit" class="bg-[color:var(--green)] text-black font-semibold px-6 py-3 rounded-full hover:bg-[#159b44] transition w-full">Send Message</button>

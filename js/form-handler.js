@@ -94,6 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   forms.forEach(form => {
     form.addEventListener('submit', async (e) => {
+      // Force native browser validation feedback before AJAX submit.
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity();
+        return;
+      }
+
       e.preventDefault(); // Prevent default submission
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton.textContent;

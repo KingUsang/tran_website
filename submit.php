@@ -18,7 +18,7 @@ $toEmail = 'info@therootaccessnetwork.com'; // CHANGE THIS TO YOUR EMAIL
 $fromEmail = 'noreply@info@therootaccessnetwork.comnetwork.com'; // CHANGE THIS TO A VALID SENDER EMAIL ON YOUR SERVER
 
 // Get form data
-$formType = $_POST['form_type'] ?? 'contact'; // 'contact', 'newsletter', 'get-involved'
+$formType = $_POST['form_type'] ?? 'contact';
 $name = $_POST['name'] ?? 'N/A';
 $email = $_POST['email'] ?? '';
 $message = $_POST['message'] ?? '';
@@ -49,6 +49,21 @@ if ($formType === 'contact' && !empty($subject)) {
 
 if (!empty($message)) {
     $emailBody .= "\nMessage:\n$message\n";
+}
+
+// Preserve new contact and partnership fields when the PHP endpoint is used
+// as a fallback to the worker-based form service.
+$extendedFields = [
+    'organisation' => 'Organisation',
+    'country' => 'Country',
+    'partnership_type' => 'Partnership Type',
+    'consent' => 'Consent'
+];
+foreach ($extendedFields as $field => $label) {
+    if (!empty($_POST[$field])) {
+        $value = trim((string) $_POST[$field]);
+        $emailBody .= "$label: $value\n";
+    }
 }
 
 $headers = "From: $fromEmail" . "\r\n" .

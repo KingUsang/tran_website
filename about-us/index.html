@@ -1,367 +1,293 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | The Root Access Network</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About TRAN | The Root Access Network</title>
+  <meta name="description" content="Meet The Root Access Network, the educational IP company behind CYTRAC™, and discover how community learning became a vision for children's digital safety.">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="manifest" href="/site.webmanifest">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --green: #1DB954;      /* primary accent */
-      --dark: #0F2D1E;       /* deep green/dark header */
-      --muted: #ecedf0;
-      --white: #ffffff
-    }
-    body { font-family: 'Outfit', sans-serif; }
-    /* play overlay circle */
-    .play-overlay {
-      background: rgba(0,0,0,0.45);
-      backdrop-filter: blur(2px);
-      width:72px; height:72px; border-radius:9999px;
-      display:flex; align-items:center; justify-content:center;
-      transition: transform .18s ease;
-    }
-    .play-overlay svg { width:28px; height:28px; color:white; }
-    .play-overlay:hover{ transform: scale(1.06); }
-    /* horizontal event scroll smoothing */
-    .scroll-snap { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-    .card-snap { scroll-snap-align: start; }
-    /* small shadow */
-    .soft-glow { box-shadow: 0 10px 30px rgba(16,185,129,0.08); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/about.css">
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<body class="bg-white text-gray-900 font-sans">
-
-  <!-- ===== STICKY HEADER ===== -->
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-[color:var(--dark)] border-b border-[color:var(--green)]/20 text-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex items-center justify-between h-16">
-       <!-- Left: Logo -->
-        <a href="/" class="flex items-center gap-3">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
-          <div>
-            <div class="text-lg font-extrabold">TRAN</div>
-            <div class="text-xs text-gray-300 -mt-1">The Root Access Network</div>
-          </div>
-        </a>
-
-        <nav class="hidden md:flex items-center gap-6 font-medium">
-          <a href="/about-us/" class="hover:text-[color:var(--green)]">About</a>
-          <a href="/programs/" class="hover:text-[color:var(--green)]">Programs</a>
-          <a href="/get-involved/" class="hover:text-[color:var(--green)]">Get Involved</a>
-          <a href="/contact/" class="hover:text-[color:var(--green)]">Contact</a>
-        </nav>
-
-        <div class="hidden md:flex items-center gap-3">
-          <a href="https://www.youtube.com/@TheRootAccessNetwork" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] hover:bg-[color:var(--green)] hover:text-white transition">Watch</a>
-          <a href="/get-involved/#join" class="inline-flex bg-[color:var(--green)] text-black px-4 py-2 rounded-full font-semibold hover:bg-[#159b44] transition">Join</a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button id="mobileBtn" class="md:hidden p-2 rounded-md border border-white/20 text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/></svg>
-        </button>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="The Root Access Network home">
+        <img src="/TRAN-Logo.png" alt="">
+        <strong>TRAN<span>The Root Access Network</span></strong>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a aria-current="page" href="/about-us/">About TRAN</a>
+        <a href="/cytrac/">CYTRAC™</a>
+        <a href="/impact/">Our Impact</a>
+        <a href="/partner-with-us/">Partner With Us</a>
+        <a href="/news/">News</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <a class="header-ubi" href="/ubuntu-bridge/">Ubuntu Bridge Initiative ↗</a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" data-menu-button>
+        <svg class="menu-open-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="menu-close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
     </div>
-
-    <!-- Mobile nav (hidden by default) -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[color:var(--dark)]/95 border-t border-white/10">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/about-us/" class="block text-white">About</a>
-        <a href="/programs/" class="block text-white font-semibold">Programs</a>
-        <a href="/get-involved/" class="block text-white">Get Involved</a>
-        <a href="/contact/" class="block text-white">Contact</a>
-        <div class="pt-2 flex gap-2">
-          <a href="https://www.youtube.com/@TheRootAccessNetwork" class="flex-1 py-2 rounded-full border border-[color:var(--green)] text-[color:var(--green)] text-center">Watch</a>
-          <a href="/get-involved/#join" class="flex-1 py-2 rounded-full bg-[color:var(--green)] text-black text-center">Join</a>
-        </div>
-      </div>
-    </div>
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" data-mobile-nav>
+      <a aria-current="page" href="/about-us/">About TRAN</a>
+      <a href="/cytrac/">CYTRAC™</a>
+      <a href="/impact/">Our Impact</a>
+      <a href="/partner-with-us/">Partner With Us</a>
+      <a href="/news/">News</a>
+      <a href="/contact/">Contact</a>
+      <a class="button button-primary" href="/ubuntu-bridge/">Ubuntu Bridge Initiative ↗</a>
+    </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative bg-black text-white">
-    <img src="../about-hero.jpg" alt="TRAN in action" class="w-full h-[80vh] object-cover opacity-60">
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-[color:var(--green)] mb-4">About Us</h1>
-      <p class="max-w-2xl text-gray-200 mb-6 text-lg">
-        The Root Access Network (TRAN) is a cybersecurity education company dedicated to making digital safety knowledge accessible to everyone.
-        We design and deliver innovative cybersecurity learning products and services, including educational board games, digital learning tools, training programs, workshops, and curriculum materials for schools, organisations, and communities.
-      </p>
-      <div class="flex flex-col md:flex-row gap-4">
-        <a href="/get-involved/" class="bg-green-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition text-center">Join the Network</a>
-        <a href="https://www.youtube.com/@TheRootAccessNetwork" class="border border-green-500 text-green-500 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition text-center">Watch Our Videos</a>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container hero-copy reveal">
+        <p class="label">The company behind CYTRAC™</p>
+        <h1>We build educational worlds for a safer digital generation.</h1>
+        <p>TRAN is an educational intellectual-property company creating children's digital-safety brands, products and experiences across Nigeria and the United Kingdom.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="https://www.cytracgames.com" target="_blank" rel="noopener">Explore CYTRAC™</a>
+          <a class="button button-secondary" href="/contact/">Partner with TRAN</a>
+        </div>
       </div>
-    </div>
-  </section>
+      <div class="hero-media reveal" aria-label="TRAN founder, school activity and CYTRAC product">
+        <figure class="hero-school"><img src="/School tour.jpg" alt="Students, educators and TRAN team members during a school activity"></figure>
+        <figure class="hero-product"><img src="/cytrac.jpg" alt="CYTRAC family cybersecurity board game"></figure>
+        <figure class="hero-founder"><img src="/team/tran_founder.jpg" alt="Quadri Omoloju, founder of The Root Access Network"></figure>
+      </div>
+    </section>
 
-  <!-- OUR STORY -->
-  <section class="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-10 items-center">
-    <img src="../founder.jpeg" alt="TRAN founder" class="rounded-2xl shadow-lg object-cover">
-    <div>
-      <h2 class="text-3xl font-bold text-green-600 mb-4">Our Story</h2>
-      <p class="text-gray-700 mb-4 leading-relaxed">
+    <section class="story section" aria-labelledby="story-title">
+      <div class="container">
+        <header class="story-heading reveal">
+          <p class="label">Our story</p>
+          <h2 id="story-title">Six milestones. One evolving mission.</h2>
+          <p>TRAN began with practical digital-safety learning and is growing that experience into educational products and social impact.</p>
+        </header>
+        <ol class="timeline" aria-label="TRAN company milestones">
+          <li class="reveal">
+            <span class="milestone-number">01</span><span class="timeline-kicker">TRAN formation</span>
+            <h3>A company built around accessible digital-safety learning.</h3>
+            <p>TRAN was formed to make digital-safety knowledge more practical, memorable and easier to access.</p>
+            <figure><img src="/team/tran_founder.jpg" alt="Quadri Omoloju, founder of The Root Access Network"></figure>
+          </li>
+          <li class="reveal">
+            <span class="milestone-number">02</span><span class="timeline-kicker">School outreach</span>
+            <h3>Taking digital-safety learning into schools and communities.</h3>
+            <p>School-based activity in Nigeria reached more than 500 students and grounded TRAN's work in real learning environments.</p>
+            <figure><img src="/School tour.jpg" alt="Students and TRAN facilitators during a school outreach activity"></figure>
+          </li>
+          <li class="reveal">
+            <span class="milestone-number">03</span><span class="timeline-kicker">CYTRAC concept &amp; prototype</span>
+            <h3>Turning everyday online choices into something children can play.</h3>
+            <p>Learning from community outreach led to the CYTRAC concept: a board game designed to make digital-safety conversations engaging and memorable.</p>
+          </li>
+          <li class="reveal">
+            <span class="milestone-number">04</span><span class="timeline-kicker">London playtest</span>
+            <h3>Testing the learning experience through public play.</h3>
+            <p>CYTRAC public playtesting in London helped TRAN observe how people interact with the game, gather feedback and refine it.</p>
+          </li>
+          <li class="reveal">
+            <span class="milestone-number">05</span><span class="timeline-kicker">Production &amp; launch</span>
+            <h3>CYTRAC becomes a physical game, ready to play.</h3>
+            <p>The finished board game takes digital-safety learning beyond an idea and into shared play for children, families and educators.</p>
+            <figure><img src="/assets/images/cytrac/cytrac-hero-lifestyle.webp" alt="The finished CYTRAC board game arranged for play"></figure>
+          </li>
+          <li class="reveal">
+            <span class="milestone-number">06</span><span class="timeline-kicker">UBI launch</span>
+            <h3>Creating a dedicated route for access and opportunity.</h3>
+            <p>Ubuntu Bridge Initiative becomes TRAN's social-impact arm, connecting emerging talent with practical learning, mentorship and digital inclusion.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-TRAN began as a community helping people grow in technology through mentorship and shared learning.
-As we grew, we discovered a bigger gap — people were using the internet without understanding how to stay safe.
-This led us to evolve into a cybersecurity education company, building simple and practical learning tools like CYTRAC.
-Today, we empower individuals, schools, and organisations with the knowledge to navigate the digital world safely.
-      </p>
-    </div>
-  </section>
+    <section class="purpose" aria-label="TRAN mission and vision">
+      <div class="container purpose-grid">
+        <article class="reveal">
+          <p class="label">Mission</p>
+          <h2>Build the world's leading children's digital-safety brand.</h2>
+        </article>
+        <article class="reveal">
+          <p class="label">Vision</p>
+          <p class="vision-copy">A world where digital-safety learning feels as natural and memorable as learning through play.</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- MISSION, VISION, VALUES -->
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto text-center px-6">
-      <h2 class="text-3xl font-bold text-green-600 mb-6">Our Mission</h2>
-      <p class="text-gray-700 mb-10 max-w-2xl mx-auto">To build a world where individuals develop strong cybersecurity awareness from an early age, and organisations foster responsible digital citizenship.</p>
+    <section class="build section" aria-labelledby="build-title">
+      <div class="container build-heading reveal">
+        <p class="label">How TRAN builds</p>
+        <h2 id="build-title">Learning moves from real people into products that can travel.</h2>
+      </div>
+      <ol class="container build-flow">
+        <li class="reveal"><strong>Research</strong><span>Understand real digital-safety needs.</span></li>
+        <li class="reveal"><strong>Co-design and playtest</strong><span>Observe, listen and refine with people.</span></li>
+        <li class="reveal"><strong>Educational design</strong><span>Turn complex lessons into engaging experiences.</span></li>
+        <li class="reveal"><strong>Products and content</strong><span>Create physical and future learning formats.</span></li>
+        <li class="reveal"><strong>Schools and families</strong><span>Bring learning into everyday settings.</span></li>
+        <li class="reveal"><strong>Expansion and licensing</strong><span>Help strong educational IP reach further.</span></li>
+      </ol>
+    </section>
 
-      <h2 class="text-3xl font-bold text-green-600 mb-6">Our Focus Areas</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-left">
-        <!-- Card 1: Innovation -->
-        <div class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-          <!-- Faded Watermark Icon -->
-          <div class="absolute -top-4 -right-4 text-green-500 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
-            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+    <section class="architecture section" id="company-structure" aria-labelledby="architecture-title">
+      <div class="container">
+        <div class="architecture-heading reveal">
+          <p class="label">How the company fits together</p>
+          <h2 id="architecture-title">TRAN grows one mission through two connected parts.</h2>
+        </div>
+
+        <div class="brand-family reveal">
+          <div class="brand-parent">
+            <div class="brand-parent-copy">
+              <span>Parent company</span>
+              <strong>TRAN</strong>
+              <p>Builds and stewards educational brands, products and experiences for a safer digital generation.</p>
+            </div>
+            <figure><img src="/School tour.jpg" alt="TRAN team members, educators and students after a school learning activity"></figure>
           </div>
-          <div class="relative z-10">
-            <h3 class="font-bold text-xl text-gray-900 mb-3">Innovation</h3>
-            <p class="text-gray-600 leading-relaxed">Cybersecurity education products and learning tools.</p>
-          </div>
-        </div>
 
-        <!-- Card 2: Mentorship -->
-        <div class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-          <div class="absolute -top-4 -right-4 text-green-500 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
-            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-          </div>
-          <div class="relative z-10">
-            <h3 class="font-bold text-xl text-gray-900 mb-3">Mentorship</h3>
-            <p class="text-gray-600 leading-relaxed">Professional training and mentorship programs.</p>
-          </div>
-        </div>
+          <div class="family-connector" aria-hidden="true"><span></span></div>
 
-        <!-- Card 3: Awareness -->
-        <div class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-          <div class="absolute -top-4 -right-4 text-green-500 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
-            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 00-3 3v6a3 3 0 003 3h3.763l7.79 3.894A1 1 0 0018 21V3zm1.778 4.095a1 1 0 10-1.556 1.81c1.367 1.176 2.028 2.396 2.028 3.595 0 1.2-.66 2.419-2.028 3.595a1 1 0 101.556 1.81c2.05-1.763 2.972-3.876 2.972-5.405 0-1.53-.922-3.642-2.972-5.405z" clip-rule="evenodd" /></svg>
-          </div>
-          <div class="relative z-10">
-            <h3 class="font-bold text-xl text-gray-900 mb-3">Awareness</h3>
-            <p class="text-gray-600 leading-relaxed">Cybersecurity awareness and digital literacy initiatives.</p>
+          <div class="brand-children" aria-label="TRAN company structure">
+            <a class="brand-child cytrac-child" href="https://www.cytracgames.com" target="_blank" rel="noopener">
+              <figure><img src="/cytrac.jpg" alt="CYTRAC family cybersecurity board game"></figure>
+              <div class="brand-child-copy">
+                <span>Flagship commercial IP</span>
+                <strong>CYTRAC™</strong>
+                <p>Digital safety children can learn through play.</p>
+                <small>Explore CYTRAC <b aria-hidden="true">↗</b></small>
+              </div>
+            </a>
+            <a class="brand-child ubi-child" href="/ubuntu-bridge/">
+              <div class="ubi-mark" aria-hidden="true"><span>UBI</span><i></i><i></i><i></i></div>
+              <div class="brand-child-copy">
+                <span>Social-impact arm</span>
+                <strong>Ubuntu Bridge Initiative</strong>
+                <p>Expands access to practical learning and opportunity.</p>
+                <small>Discover UBI <b aria-hidden="true">→</b></small>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHAT WE DO -->
-<section class="max-w-7xl mx-auto py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold text-green-600 mb-10">What We Do</h2>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
-    <!-- CYTRAC Card -->
-    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
-      <img src="../cytrac.jpg" alt="CYTRAC Board Game" class="w-full h-48 object-cover">
-      <div class="p-6 flex flex-col items-center flex-grow text-center">
-        <h3 class="font-semibold text-lg text-green-600 mb-2">CYTRAC</h3>
-        <p class="text-gray-700 text-sm">Our flagship educational cybersecurity board game designed to teach practical digital safety skills through play.</p>
-      </div>
-    </div>
-
-    <!-- Mentorship Card -->
-    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
-      <img src="../mentorship.jpg" alt="Mentorship" class="w-full h-48 object-cover">
-      <div class="p-6 flex flex-col items-center flex-grow text-center">
-        <h3 class="font-semibold text-lg text-green-600 mb-2">Cybersecurity Mentorship and Education</h3>
-        <p class="text-gray-700 text-sm">Connecting aspiring cybersecurity professionals with experienced mentors.</p>
-      </div>
-    </div>
-
-    <!-- School Tours -->
-    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
-      <img src="../School tour.jpg" alt="School Tours" class="w-full h-48 object-cover">
-      <div class="p-6 flex flex-col items-center flex-grow text-center">
-        <h3 class="font-semibold text-lg text-green-600 mb-2">School Tours</h3>
-        <p class="text-gray-700 text-sm">Introducing cybersecurity to students across Nigerian schools.</p>
-      </div>
-    </div>
-
-    <!-- Street Interview -->
-    <div class="flex flex-col bg-white rounded-xl shadow hover:shadow-lg transition w-full h-full max-w-sm overflow-hidden">
-      <img src="../thumbnail2.png" alt="Street Vox Pop" class="w-full h-48 object-cover">
-      <div class="p-6 flex flex-col items-center flex-grow text-center">
-        <h3 class="font-semibold text-lg text-green-600 mb-2">Cybersecurity Street Interview</h3>
-        <p class="text-gray-700 text-sm">Raising public cybersecurity awareness through community interviews.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- IMPACT NUMBERS -->
-  <section class="bg-green-600 text-white py-16">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 text-center gap-8">
-      <div><h3 class="text-4xl font-bold">500+</h3><p>Students Reached</p></div>
-      <div><h3 class="text-4xl font-bold">10+</h3><p>Weeks of Ubuntu Bridge</p></div>
-      <div><h3 class="text-4xl font-bold">50+</h3><p>students mentored</p></div>
-      <div><h3 class="text-4xl font-bold">4+</h3><p>School Tour Episodes</p></div>
-    </div>
-  </section>
-
-  <!-- FOUNDER NOTE -->
-  <section class="max-w-4xl mx-auto py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-600 mb-6">A Word from Our Founder</h2>
-    <blockquote class="text-gray-700 text-lg italic leading-relaxed mb-4">
-      &ldquo;The vision behind TRAN is simple but bold: to make access to cybersecurity knowledge as common as air. We don&rsquo;t just talk about opportunities — we prepare you for them.&rdquo;
-    </blockquote>
-    <p class="font-semibold text-green-600">— Quadri Omoloju, Founder, The Root Access Network</p>
-  </section>
-
-  <!-- PARTNERS -->
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-green-600 mb-4">Our Partners &amp; Community</h2>
-      <p class="text-gray-600 mb-10">TRAN works alongside organisations that share our mission of expanding access to tech education globally.</p>
-      <div class="flex flex-wrap justify-center gap-6 text-left">
-        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
-          <h3 class="font-bold text-green-600 mb-1">KDSCE</h3>
-          <p class="text-gray-600 text-sm">Kaduna Students Career Expo — formal partnership announced January 2026</p>
+    <section class="values section" aria-labelledby="values-title">
+      <div class="container values-grid">
+        <div class="reveal">
+          <p class="label">What guides the work</p>
+          <h2 id="values-title">Serious learning can still invite curiosity.</h2>
         </div>
-        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
-          <h3 class="font-bold text-green-600 mb-1">Project Code-Hijabi</h3>
-          <p class="text-gray-600 text-sm">Platinum Partner, supporting Muslim women into tech</p>
-        </div>
-        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
-          <h3 class="font-bold text-green-600 mb-1">ISC2 Center for Cyber Safety and Education</h3>
-          <p class="text-gray-600 text-sm">Community volunteering affiliation</p>
-        </div>
-        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
-          <h3 class="font-bold text-green-600 mb-1">Africa CyberFest</h3>
-          <p class="text-gray-600 text-sm">Community sponsor and attendee partner</p>
-        </div>
-        <div class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] bg-white p-5 rounded-xl shadow">
-          <h3 class="font-bold text-green-600 mb-1">Cumberland Road Masjid</h3>
-          <p class="text-gray-600 text-sm">Partner for free 4-month AI workshops teaching practical skills to kids and adults.</p>
+        <div class="values-copy reveal">
+          <p>TRAN believes digital-safety education should be engaging without becoming a gimmick, accessible without losing depth, and culturally relevant without limiting its ability to travel.</p>
+          <ul aria-label="TRAN values">
+            <li>Learning through play</li>
+            <li>Safety by design</li>
+            <li>Accessibility</li>
+            <li>Cultural relevance</li>
+            <li>Community</li>
+            <li>Responsible technology</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TEAM SECTION -->
-  <section class="max-w-7xl mx-auto py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-600 mb-10">Meet the Team</h2>
-    <div class="space-y-10">
-      <div class="max-w-xs mx-auto">
-        <a href="https://www.linkedin.com/in/quadri-omoloju-950b20208/">
-          <img src="../founder.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-          <h3 class="font-semibold text-lg">Quadri Omoloju</h3>
-          <p class="text-gray-600 text-sm">Founder & CEO</p>
-        </a>
-      </div>
-
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 items-start max-w-5xl mx-auto">
-        <div class="md:col-start-1 sm:order-2 md:order-none">
-          <a href="https://www.linkedin.com/in/maryam-sulaiman/">
-            <img src="../community-manager.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-            <h3 class="font-semibold text-lg">Maryam Sulaiman</h3>
-            <p class="text-gray-600 text-sm">Community Manager</p>
-          </a>
-        </div>
-        <div class="md:col-start-2 sm:order-1 md:order-none">
-          <a href="https://www.linkedin.com/in/muhammad-shitta-bey/">
-            <img src="../Cybersecurity-educator.jpeg" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-            <h3 class="font-semibold text-lg">Muhammad Shitta-Bey</h3>
-            <p class="text-gray-600 text-sm">Cybersecurity Educator</p>
-          </a>
-        </div>
-        <div class="md:col-start-3 sm:col-span-2 md:col-span-1 sm:justify-self-center md:justify-self-auto sm:order-3 md:order-none">
-          <a href="https://www.linkedin.com/in/barakatullah-alawiye-4062902a7/">
-            <img src="../Education-Awareness-lead.png" alt="Team Member" class="rounded-full w-40 h-40 mx-auto object-cover shadow-lg mb-4">
-            <h3 class="font-semibold text-lg">Barakatullah Alawiye</h3>
-            <p class="text-gray-600 text-sm">Education & Awareness Lead</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CALL TO ACTION -->
-  <section class="bg-black text-white py-16 text-center">
-    <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-      <h2 class="text-3xl font-bold text-green-500 mb-6">Ready to Make a Difference?</h2>
-      <p class="text-gray-300 mb-8 max-w-2xl">Whether you're a student just starting out, a professional ready to give back, or an organisation that wants to make an impact — there's a place for you here.</p>
-      <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto justify-center">
-        <a href="/get-involved/" class="bg-green-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition text-center w-full md:w-auto">Join the Network</a>
-        <a href="/contact/" class="border border-green-500 text-green-500 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition text-center w-full md:w-auto">Partner With Us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#0F2D1E] text-gray-200 py-10">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-            <img src="../TRAN-Logo.png" alt="Logo" class="w-10 h-10 object-contain">
+    <section class="team section" aria-labelledby="team-title">
+      <div class="container">
+        <div class="team-heading reveal">
           <div>
-            <div class="font-bold text-white">TRAN</div>
-            <div class="text-sm">The Root Access Network</div>
+            <p class="label">The people behind TRAN</p>
+            <h2 id="team-title">Meet the team building the work.</h2>
           </div>
+          <p>TRAN brings together cybersecurity, education, community and awareness experience to turn complex digital-safety ideas into learning people can use.</p>
         </div>
-        <p class="text-sm text-gray-300 mt-4 max-w-sm">TRAN is a cybersecurity education company making digital safety accessible to everyone. We create innovative learning tools, games, and workshops for schools and communities. Want to collaborate? Email us at <a href="mailto:info@therootaccessnetwork.com" class="text-[color:var(--green)]">info@therootaccessnetwork.com</a></p>
-      </div>
-      <div class="text-sm">
-        <div class="font-semibold text-white mb-3">Quick Links</div>
-        <ul class="space-y-2">
-          <li><a href="/about-us/" class="hover:text-white">About Us</a></li>
-          <li><a href="/programs/" class="hover:text-white">Programs</a></li>
-          <li><a href="/get-involved/" class="hover:text-white">Get Involved</a></li>
-          <li><a href="/contact/" class="hover:text-white">Contact</a></li>
-        </ul>
-      </div>
-      <div class="text-sm">
-        <div class="font-semibold text-white mb-3">Follow Us</div>
-        <div class="flex items-center gap-3">
-          <a href="https://ng.linkedin.com/company/the-root-access-network-t-r-a-n" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">LinkedIn</a>
-          <a href="https://www.instagram.com/info@therootaccessnetwork.comnetwork/" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">Instagram</a>
-          <a href="https://www.youtube.com/@TheRootAccessNetwork" class="px-3 py-2 rounded-md bg-white/10 hover:bg-white/20">YouTube</a>
+
+        <div class="team-grid">
+          <article class="team-member team-founder reveal">
+            <a href="https://www.linkedin.com/in/quadri-omoloju-950b20208/" target="_blank" rel="noopener" aria-label="View Quadri Omoloju on LinkedIn">
+              <figure><img src="/team/tran_founder.jpg" alt="Quadri Omoloju"></figure>
+              <div class="team-member-copy"><h3>Quadri Omoloju</h3><p>Founder</p><p class="team-bio">Cybersecurity and technology professional building more engaging ways to learn digital safety.</p><span aria-hidden="true">↗</span></div>
+            </a>
+          </article>
+          <article class="team-member reveal">
+            <a href="https://www.linkedin.com/in/somtochukwu-okoma/" target="_blank" rel="noopener" aria-label="View Somtochukwu Okoma on LinkedIn">
+              <figure><img src="/team/tran_head%20of%20programs.jpg" alt="Somtochukwu Okoma"></figure>
+              <div class="team-member-copy"><h3>Somtochukwu Okoma</h3><p>Head of Programs</p><span aria-hidden="true">↗</span></div>
+            </a>
+          </article>
+          <article class="team-member reveal">
+            <a href="https://www.linkedin.com/in/maryam-sulaiman/" target="_blank" rel="noopener" aria-label="View Maryam Sulaiman on LinkedIn">
+              <figure><img src="/team/maryam-sulaiman.jpeg" alt="Maryam Sulaiman"></figure>
+              <div class="team-member-copy"><h3>Maryam Sulaiman</h3><p>Education &amp; Awareness Lead</p><span aria-hidden="true">↗</span></div>
+            </a>
+          </article>
+          <article class="team-member reveal">
+            <a href="https://www.linkedin.com/in/muhammad-shitta-bey/" target="_blank" rel="noopener" aria-label="View Muhammad Shitta-Bey on LinkedIn">
+              <figure><img src="/team/muhammad-shitta-bey.jpeg" alt="Muhammad Shitta-Bey"></figure>
+              <div class="team-member-copy"><h3>Muhammad Shitta-Bey</h3><p>Education &amp; Awareness Lead</p><span aria-hidden="true">↗</span></div>
+            </a>
+          </article>
+          <article class="team-member reveal">
+            <a href="https://www.linkedin.com/in/barakatullah-alawiye-4062902a7/" target="_blank" rel="noopener" aria-label="View Barakatullah Alawiye on LinkedIn">
+              <figure><img src="/team/barakatullah-alawiye.png" alt="Barakatullah Alawiye"></figure>
+              <div class="team-member-copy"><h3>Barakatullah Alawiye</h3><p>Education &amp; Awareness Lead</p><span aria-hidden="true">↗</span></div>
+            </a>
+          </article>
         </div>
-        <div class="mt-6 text-xs text-gray-400">© 2026 The Root Access Network</div>
       </div>
+    </section>
+
+    <section class="company-close section" aria-labelledby="company-close-title">
+      <div class="container close-grid">
+        <div class="company-facts reveal">
+          <p class="label">Company facts</p>
+          <dl>
+            <div><dt>Company</dt><dd>The Root Access Network</dd></div>
+            <div><dt>Formation</dt><dd><span class="draft-placeholder">Date to be confirmed</span></dd></div>
+            <div><dt>UK registration</dt><dd><span class="draft-placeholder">Registration details to be confirmed</span></dd></div>
+            <div><dt>Focus</dt><dd>Children's digital-safety educational IP</dd></div>
+            <div><dt>Building across</dt><dd>Nigeria and the United Kingdom</dd></div>
+            <div><dt>Flagship IP</dt><dd>CYTRAC™</dd></div>
+            <div><dt>Social impact</dt><dd>Ubuntu Bridge Initiative</dd></div>
+            <div><dt>Partnerships</dt><dd>Schools, distribution, licensing, corporate and social-impact partners</dd></div>
+            <div><dt>Contact</dt><dd><a href="mailto:info@therootaccessnetwork.com">info@therootaccessnetwork.com</a></dd></div>
+          </dl>
+        </div>
+        <div class="close-copy reveal">
+          <h2 id="company-close-title">Build the next chapter with TRAN.</h2>
+          <p>We welcome conversations with schools, distributors, licensors, corporate partners, funders and organisations that want to make digital-safety learning more engaging and accessible.</p>
+          <a class="button button-dark" href="/contact/">Partner with TRAN</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/" aria-label="The Root Access Network home"><img src="/TRAN-Logo.png" alt=""><strong>TRAN<span>The Root Access Network</span></strong></a>
+          <p class="footer-copy">Educational intellectual property for a safer digital generation.</p>
+        </div>
+          <div><p class="footer-title">Explore</p><nav class="footer-links" aria-label="Explore"><a href="/about-us/">About TRAN</a><a href="/cytrac/">CYTRAC™</a><a href="/impact/">Our Impact</a><a href="/news/">News</a></nav></div>
+        <div><p class="footer-title">Our worlds</p><nav class="footer-links" aria-label="Our worlds"><a href="/cytrac/">CYTRAC™</a><a href="/ubuntu-bridge/">Ubuntu Bridge Initiative</a><a href="/partner-with-us/">Partner With Us</a></nav></div>
+        <div><p class="footer-title">Contact</p><nav class="footer-links" aria-label="Contact"><a href="mailto:info@therootaccessnetwork.com">info@therootaccessnetwork.com</a><a href="/contact/">Get in touch</a><a href="https://www.linkedin.com/company/the-root-access-network-t-r-a-n" target="_blank" rel="noopener">LinkedIn</a></nav></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> The Root Access Network. All rights reserved.</span><span>Building across Nigeria and the United Kingdom.</span></div>
     </div>
   </footer>
 
+  <script src="/js/home.js"></script>
 </body>
-
-<script>
-  // Mobile menu toggle
-  const mobileBtn = document.getElementById('mobileBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  mobileBtn?.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
 </html>

@@ -1,0 +1,53 @@
+.cytrac-page { --cytrac-ink: #101d39; --cytrac-blue: #2774f0; --cytrac-pale: #eaf1ff; --cytrac-mint: #8ee7c4; color: var(--cytrac-ink); }
+.cytrac-page .page-title { max-width: 13ch; margin: .8rem 0 1.2rem; font-size: clamp(2.65rem, 5.2vw, 5.2rem); line-height: .96; }
+.cytrac-page .page-title em { color: var(--cytrac-blue); }
+.cytrac-intro { padding: clamp(3.5rem, 8vw, 7rem) 0; background: linear-gradient(140deg, var(--paper) 0 58%, var(--cytrac-pale) 58%); }
+.cytrac-intro-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(20rem, .82fr); gap: clamp(2.5rem, 7vw, 7rem); align-items: center; }
+.cytrac-wordmark { display: block; width: min(15rem, 64%); height: auto; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.cytrac-intro .page-lead { max-width: 34rem; font-size: clamp(1rem, 1.3vw, 1.18rem); }
+.cytrac-product-hero { position: relative; margin: 0; overflow: hidden; border-radius: 1.5rem; box-shadow: 0 1.25rem 4rem rgba(16,29,57,.15); }
+.cytrac-product-hero img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.cytrac-product-hero figcaption { position: absolute; right: 1rem; bottom: 1rem; max-width: 16rem; padding: .7rem .9rem; background: var(--cytrac-ink); color: white; font-size: .76rem; }
+.cytrac-section { padding: clamp(4rem, 8vw, 7rem) 0; }
+.cytrac-section-head { display: grid; grid-template-columns: minmax(0, .7fr) minmax(16rem, 1fr); gap: clamp(1.5rem, 6vw, 6rem); margin-bottom: clamp(2.5rem, 5vw, 4.5rem); align-items: end; }
+.cytrac-section-head h2 { max-width: 12ch; margin: 0; font-family: var(--display); font-size: clamp(2rem, 4vw, 4rem); letter-spacing: -.055em; line-height: .98; }
+.cytrac-section-head p { max-width: 35rem; margin: 0; color: #405275; font-size: 1.02rem; line-height: 1.55; }
+.cytrac-eyebrow { margin: 0 0 .7rem; color: var(--cytrac-blue); font-size: .7rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.cytrac-audience { background: var(--cytrac-pale); color: var(--cytrac-ink); }
+.cytrac-audience .cytrac-section-head p { color: #405275; }
+.audience-list { border-top: 1px solid rgba(16,29,57,.42); }
+.audience-list article { display: grid; grid-template-columns: 3rem minmax(8rem, .85fr) minmax(0, 1.3fr) auto; gap: 1.4rem; padding: 1.4rem 0; align-items: baseline; border-bottom: 1px solid rgba(16,29,57,.42); }
+.audience-list span { font-size: .75rem; font-weight: 800; letter-spacing: .08em; }
+.audience-list h3 { margin: 0; font-family: var(--display); font-size: clamp(1.5rem, 2.7vw, 2.45rem); letter-spacing: -.04em; }
+.audience-list p { margin: 0; line-height: 1.45; }
+.audience-list a { color: var(--cytrac-ink); font-weight: 800; text-decoration-color: rgba(16,29,57,.6); text-underline-offset: .23em; }
+.product-steps { display: grid; gap: clamp(3.5rem, 8vw, 7rem); }
+.product-step { display: grid; grid-template-columns: minmax(16rem, .85fr) minmax(0, 1fr); gap: clamp(2rem, 7vw, 7rem); align-items: center; }
+.product-step:nth-child(even) > :first-child { order: 2; }
+.product-step figure { margin: 0; overflow: hidden; border-radius: 1.25rem; background: var(--cytrac-pale); }
+.product-step img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.product-step h3 { max-width: 12ch; margin: .5rem 0 .85rem; font-family: var(--display); font-size: clamp(1.8rem, 3.3vw, 3.35rem); letter-spacing: -.055em; line-height: 1; }
+.product-step p:last-child { max-width: 34rem; margin: 0; color: #405275; line-height: 1.55; }
+.cytrac-learning { background: var(--cytrac-pale); }
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(16,29,57,.22); }
+.topic-grid div { min-height: 9rem; padding: 1.25rem; border-right: 1px solid rgba(16,29,57,.22); border-bottom: 1px solid rgba(16,29,57,.22); }
+.topic-grid div:nth-child(3n) { border-right: 0; }
+.topic-grid strong { display: block; font-family: var(--display); font-size: 1.35rem; letter-spacing: -.03em; }
+.topic-grid span { display: block; margin-top: .5rem; color: #405275; font-size: .88rem; }
+.cytrac-proof { background: var(--cytrac-ink); color: white; }
+.cytrac-proof .cytrac-section-head p { color: #ced9f5; }
+.proof-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 1rem; }
+.proof-grid figure { display: flex; margin: 0; flex-direction: column; }
+.proof-grid video { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #071025; }
+.proof-grid figcaption { padding: .9rem 0 .2rem; color: #ced9f5; font-size: .86rem; line-height: 1.45; }
+.proof-grid figcaption strong { display: block; margin-bottom: .25rem; color: white; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.cytrac-universe { background: var(--paper); }
+.universe-strip { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid rgba(16,29,57,.25); border-bottom: 1px solid rgba(16,29,57,.25); }
+.universe-strip div { min-height: 9rem; padding: 1.2rem; border-right: 1px solid rgba(16,29,57,.25); }
+.universe-strip div:last-child { border-right: 0; }
+.universe-strip strong { display: block; font-family: var(--display); font-size: 1.28rem; letter-spacing: -.03em; }
+.universe-strip span { display: block; margin-top: .7rem; color: #51617c; font-size: .78rem; }
+.cytrac-close { display: flex; justify-content: space-between; gap: 2rem; margin-top: 2rem; align-items: center; }
+.cytrac-close p { max-width: 28rem; margin: 0; color: #405275; }
+@media (max-width: 62rem) { .cytrac-intro-grid, .cytrac-section-head, .product-step { grid-template-columns: 1fr; } .cytrac-section-head { gap: 1rem; } .product-step:nth-child(even) > :first-child { order: 0; } .proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .audience-list article { grid-template-columns: 2.5rem 1fr 1fr; } .audience-list a { grid-column: 2; } }
+@media (max-width: 42rem) { .cytrac-intro { background: var(--paper); } .cytrac-wordmark { width: 11rem; } .audience-list article, .proof-grid, .topic-grid, .universe-strip { grid-template-columns: 1fr; } .audience-list article { gap: .45rem; } .audience-list a { grid-column: auto; margin-top: .5rem; } .topic-grid div, .topic-grid div:nth-child(3n), .universe-strip div { min-height: auto; border-right: 0; } .proof-grid video { aspect-ratio: 16 / 10; } .cytrac-close { align-items: flex-start; flex-direction: column; } }

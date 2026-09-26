@@ -26,7 +26,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
+html, body {
   min-width: 20rem;
   max-width: 100%;
   margin: 0;
@@ -144,7 +144,7 @@ img { display: block; max-width: 100%; }
 .sticker-play { color: #10b981; transform: translateX(-5px); }
 .sticker-learn { color: #f59e0b; transform: translateX(8px); }
 .sticker-secure { color: #06b6d4; transform: translateX(-2px); }
-.hero-chip { position: absolute; right: -0.4rem; bottom: 0; width: min(17rem, 55%); padding: 1.15rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 1rem; background: rgba(7, 18, 13, 0.88); backdrop-filter: blur(15px); }
+.hero-chip { position: absolute; right: 0; bottom: 0; width: min(17rem, 55%); padding: 1.15rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 1rem; background: rgba(7, 18, 13, 0.88); backdrop-filter: blur(15px); }
 .hero-chip b { display: block; font-family: var(--display); font-size: 1.2rem; }
 .hero-chip span { display: block; margin-top: 0.25rem; color: var(--muted); font-size: 0.76rem; }
 
@@ -345,7 +345,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* 2026 transcript-led homepage rebuild */
-.worlds { background: linear-gradient(180deg, rgba(18,44,32,.32), transparent); }
+.worlds { overflow: hidden; position: relative; background: linear-gradient(180deg, rgba(18,44,32,.32), transparent); }
 .worlds-heading, .compact-heading { max-width: 52rem; }
 .worlds-heading .lead { max-width: 44rem; }
 .worlds-map { position:relative; display:grid; grid-template-columns:32% 8% 60%; margin-top:clamp(3.5rem,7vw,6rem); align-items:center; }
@@ -400,7 +400,7 @@ img { display: block; max-width: 100%; }
 .cytrac-playful-title .sticker-learn { color: var(--cytrac-blue); transform: rotate(1deg); }
 .cytrac-playful-title .sticker-secure { color: var(--green-dark); transform: rotate(-1deg); }
 
-.skillverse-section { background: radial-gradient(circle at 78% 45%, rgba(244,122,52,.16), transparent 28%), var(--ink-soft); }
+.skillverse-section { overflow: hidden; position: relative; background: radial-gradient(circle at 78% 45%, rgba(244,122,52,.16), transparent 28%), var(--ink-soft); }
 .skillverse-section::after,.worlds::after { position:absolute; top:var(--pointer-y,50%); left:var(--pointer-x,75%); width:26rem; height:26rem; border-radius:50%; background:rgba(58,240,160,.055); filter:blur(3rem); content:""; pointer-events:none; transform:translate(-50%,-50%); transition:top .15s linear,left .15s linear; }
 .skillverse-section::after { background:rgba(244,122,52,.07); }
 .skillverse-section .container,.worlds .container { position:relative; z-index:1; }
@@ -418,7 +418,7 @@ img { display: block; max-width: 100%; }
 .mock-bar i { width: .55rem; height: .55rem; border-radius: 50%; background: var(--cytrac-orange); }
 .mock-bar i:nth-child(2) { background: #ffca55; }.mock-bar i:nth-child(3) { background: var(--green); }
 .mock-bar span { margin-left: auto; color: var(--muted); font-size: .7rem; font-weight: 700; }
-.mock-body { display: grid; min-height: 22rem; padding: clamp(1.5rem,4vw,3rem); align-content: center; }
+.mock-html, body { display: grid; min-height: 22rem; padding: clamp(1.5rem,4vw,3rem); align-content: center; }
 .mock-body small { color: #ffb35c; text-transform: uppercase; letter-spacing: .12em; }
 .mock-body strong { max-width: 10ch; margin-top: .75rem; font-family: var(--display); font-size: clamp(2.5rem,5vw,4.6rem); letter-spacing: -.07em; line-height: .9; }
 .mock-progress { height: .45rem; margin-top: 2rem; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,.08); }.mock-progress span { display: block; width: 68%; height: 100%; background: linear-gradient(90deg,var(--cytrac-orange),#ffca55); }
@@ -459,7 +459,7 @@ img { display: block; max-width: 100%; }
   .worlds-map .world-card::before { display:block; top:50%; right:100%; width:1.75rem; transform:none; }
   .placeholder-card { width: 5.4rem; min-height: 7rem; }
   .skillverse-visual { padding-inline: 0; }
-  .mock-body { min-height: 18rem; }.mock-lessons { grid-template-columns: 1fr; }
+  .mock-html, body { min-height: 18rem; }.mock-lessons { grid-template-columns: 1fr; }
   .ubi-gallery { grid-template-columns: 1fr 1fr; min-height: auto; }.ubi-gallery figure { grid-column: auto; grid-row: auto; min-height: auto; aspect-ratio: 1/1; }
   .future-list article { grid-template-columns: 2rem 1fr; }.future-list small { grid-column: 2; }
   .partners .partner-list { grid-template-columns: 1fr; }

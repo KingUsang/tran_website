@@ -460,7 +460,7 @@ img { display: block; max-width: 100%; }
   .placeholder-card { width: 5.4rem; min-height: 7rem; }
   .skillverse-visual { padding-inline: 0; }
   .mock-body { min-height: 18rem; }.mock-lessons { grid-template-columns: 1fr; }
-  .ubi-gallery { grid-template-columns: 1fr 1fr; min-height: auto; }.ubi-gallery figure { grid-column: auto; grid-row: auto; min-height: 12rem; }
+  .ubi-gallery { grid-template-columns: 1fr 1fr; min-height: auto; }.ubi-gallery figure { grid-column: auto; grid-row: auto; min-height: auto; aspect-ratio: 1/1; }
   .future-list article { grid-template-columns: 2rem 1fr; }.future-list small { grid-column: 2; }
   .partners .partner-list { grid-template-columns: 1fr; }
   .cytrac-actions { grid-template-columns:1fr; }

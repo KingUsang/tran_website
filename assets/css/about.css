@@ -284,11 +284,11 @@ figure, blockquote { margin: 0; }
 .purpose { padding-block: clamp(4rem,8vw,7rem); background: transparent; }
 .purpose::before { background: radial-gradient(circle at 20% 50%,rgba(58,240,160,.16),transparent 30%),radial-gradient(circle at 80% 50%,rgba(112,85,201,.2),transparent 30%); }
 .purpose-grid { gap: 1rem; color: var(--text); }
-.purpose-card {  padding: clamp(2rem,4vw,4rem); border-radius: 1.5rem; text-align:left; display:flex; flex-direction:column; justify-content:flex-start; }
-.mission-card { background: linear-gradient(145deg,var(--lime),var(--green)); color:var(--ink); }
-.vision-card { border:1px solid rgba(207,198,255,.32); background:linear-gradient(145deg,#403278,var(--ubi-navy)); }
+.purpose-card { padding: clamp(2rem,4vw,4rem); border-radius: 1.5rem; border: 1px solid var(--line); background: rgba(7,18,13,0.4); text-align:left; display:flex; flex-direction:column; justify-content:flex-start; }
+
+
 .purpose-card .purpose-title { max-width:none; margin:0; font-size:clamp(2.2rem,4.2vw,4rem); line-height:1; }
-.purpose-card > p { max-width:15ch; margin:1rem 0 0; font-family:var(--display); font-size:clamp(1.65rem,3vw,2.65rem); font-weight:650; letter-spacing:-.045em; line-height:1.08; }
+.purpose-card > p { max-width:30rem; margin:1rem 0 0; font-family:var(--display); font-size:clamp(1.65rem,3vw,2.65rem); font-weight:650; letter-spacing:-.045em; line-height:1.08; }
 .mission-card .label { color:var(--green-dark); }
 .build-heading { display:block; max-width:60rem; }
 .build-heading .label { margin-bottom:1rem; }

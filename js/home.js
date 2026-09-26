@@ -58,4 +58,28 @@
 
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
+
+  const allVideos = document.querySelectorAll('video');
+  if (allVideos.length > 0) {
+    allVideos.forEach(video => {
+      video.addEventListener('play', () => {
+        allVideos.forEach(v => {
+          if (v !== video && !v.paused) v.pause();
+        });
+      });
+    });
+
+    if ('IntersectionObserver' in window && !reducedMotion) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play().catch(() => {});
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { threshold: 0.5 });
+      allVideos.forEach(video => videoObserver.observe(video));
+    }
+  }
 })();

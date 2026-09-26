@@ -318,7 +318,7 @@ figure, blockquote { margin: 0; }
 .team-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:3.5rem 1.5rem; }
 .team-member figure { width:100%; border-radius:1.1rem; background:var(--warm); }
 .team-member-copy { padding-inline:.15rem; }
-.team-member h3 { white-space:nowrap; font-size:clamp(1.05rem,1.7vw,1.45rem); }.team-member p { color:var(--green); font-weight:700; }
+.team-member h3 {  font-size:clamp(1.05rem,1.7vw,1.45rem); }.team-member p { color:var(--green); font-weight:700; }
 .team-member p,.team-member span { color:var(--green-dark); }
 .company-facts h2 { margin:0 0 1.5rem; font-family:var(--display); font-size:clamp(2rem,3.5vw,3.3rem); letter-spacing:-.05em; line-height:1; }
 .company-close { position:relative; overflow:hidden; background:radial-gradient(circle at 78% 30%,rgba(58,240,160,.13),transparent 30%),var(--warm); color:var(--ink); }

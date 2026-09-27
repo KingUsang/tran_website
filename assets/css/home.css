@@ -418,7 +418,7 @@ img { display: block; max-width: 100%; }
 .mock-bar i { width: .55rem; height: .55rem; border-radius: 50%; background: var(--cytrac-orange); }
 .mock-bar i:nth-child(2) { background: #ffca55; }.mock-bar i:nth-child(3) { background: var(--green); }
 .mock-bar span { margin-left: auto; color: var(--muted); font-size: .7rem; font-weight: 700; }
-.mock-html, body { display: grid; min-height: 22rem; padding: clamp(1.5rem,4vw,3rem); align-content: center; }
+.mock-body { display: grid; min-height: 22rem; padding: clamp(1.5rem,4vw,3rem); align-content: center; }
 .mock-body small { color: #ffb35c; text-transform: uppercase; letter-spacing: .12em; }
 .mock-body strong { max-width: 10ch; margin-top: .75rem; font-family: var(--display); font-size: clamp(2.5rem,5vw,4.6rem); letter-spacing: -.07em; line-height: .9; }
 .mock-progress { height: .45rem; margin-top: 2rem; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,.08); }.mock-progress span { display: block; width: 68%; height: 100%; background: linear-gradient(90deg,var(--cytrac-orange),#ffca55); }
@@ -459,7 +459,7 @@ img { display: block; max-width: 100%; }
   .worlds-map .world-card::before { display:block; top:50%; right:100%; width:1.75rem; transform:none; }
   .placeholder-card { width: 5.4rem; min-height: 7rem; }
   .skillverse-visual { padding-inline: 0; }
-  .mock-html, body { min-height: 18rem; }.mock-lessons { grid-template-columns: 1fr; }
+  .mock-body { min-height: 18rem; }.mock-lessons { grid-template-columns: 1fr; }
   .ubi-gallery { grid-template-columns: 1fr 1fr; min-height: auto; }.ubi-gallery figure { grid-column: auto; grid-row: auto; min-height: auto; aspect-ratio: 1/1; }
   .future-list article { grid-template-columns: 2rem 1fr; }.future-list small { grid-column: 2; }
   .partners .partner-list { grid-template-columns: 1fr; }

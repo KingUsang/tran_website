@@ -310,7 +310,7 @@ img { display: block; max-width: 100%; }
   .architecture-branch::before { display: none; }
   .footer-grid > :first-child { grid-column: auto; }
   .topic-list { grid-template-columns: 1fr; }
-  .cytrac-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+  .cytrac-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; } .cytrac-playful-title { justify-content: center; }
   .game-card { width: 5.8rem; min-height: 7rem; font-size: 0.58rem; }
   .game-card span { margin-top: 1.4rem; font-size: 1rem; }
   .matter { grid-template-columns: 1fr; gap: 0.5rem; }
